@@ -17,3 +17,22 @@ focusing_cultivation_modifier = {
 	stewardship = -3
 	prowess = -5
 }
+mount_hua_insight = {
+	monthly_lifestyle_experience_mult = 0.1
+	prowess = 2
+}
+
+wudang_clarity = {
+	learning = 2
+	stress_loss_mult = 0.1
+}
+
+medicine_king_blessing = {
+	health = 0.5
+	disease_resistance = 20
+}
+
+corpse_valley_tempering = {
+	prowess = 3
+	natural_dread = 10
+}

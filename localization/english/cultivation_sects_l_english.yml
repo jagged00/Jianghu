@@ -1,0 +1,27 @@
+﻿l_english:
+  visit_cultivation_sect_confirm:0 "Enter the mountain gate"
+
+  visit_mount_hua_sect_decision:0 "Seek Mount Hua Sect"
+  visit_mount_hua_sect_decision_desc:0 "The sword peaks of Mount Hua are said to split cloud and fate alike. If I bow before their cliffs and sharpen my heart, my qi may gain a keener edge."
+  visit_mount_hua_sect_decision_tooltip:0 "Study beneath a famed sword sect and gain realm experience."
+
+  visit_wudang_sect_decision:0 "Seek Wudang Sect"
+  visit_wudang_sect_decision_desc:0 "Within Wudang's ancient courtyards, even a single breath follows the cadence of heaven and earth. Their teachings may steady my dao heart."
+  visit_wudang_sect_decision_tooltip:0 "Seek balanced teachings and a calmer circulation of qi."
+
+  visit_medicine_king_valley_decision:0 "Seek Medicine King Valley"
+  visit_medicine_king_valley_decision_desc:0 "The alchemists of Medicine King Valley know how to purge turbid qi, mend cracked meridians, and nourish a cultivator before the next tribulation falls."
+  visit_medicine_king_valley_decision_tooltip:0 "Receive medicinal insight and a blessing for body refinement."
+
+  visit_ten_thousand_corpse_valley_decision:0 "Seek Ten Thousand Corpse Valley"
+  visit_ten_thousand_corpse_valley_decision_desc:0 "Ten Thousand Corpse Valley reeks of yin miasma and old resentments, yet those who endure its killing aura often emerge with tempered will and ruthless power."
+  visit_ten_thousand_corpse_valley_decision_tooltip:0 "Brave a dangerous demonic inheritance to gain greater experience."
+
+  mount_hua_insight:0 "Mount Hua Insight"
+  mount_hua_insight_desc:0 "After trading blows and philosophies beneath Mount Hua's cliffs, this cultivator's blade intent and circulation have both grown sharper."
+  wudang_clarity:0 "Wudang Clarity"
+  wudang_clarity_desc:0 "This cultivator has learned to let qi flow like mist over the ancient stones of Wudang."
+  medicine_king_blessing:0 "Medicine King Blessing"
+  medicine_king_blessing_desc:0 "Rare pills and careful breathing methods from Medicine King Valley have purged many hidden impurities."
+  corpse_valley_tempering:0 "Corpse Valley Tempering"
+  corpse_valley_tempering_desc:0 "After enduring corpse miasma and yin winds, this cultivator bears a fiercer and more dreadful presence."

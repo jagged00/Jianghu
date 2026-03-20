@@ -1,0 +1,4 @@
+spriteType = {
+    name = "GFX_jianghu_cultivation_lifestyle"
+    texturefile = "gfx/interface/icons/lifestyles/jianghu_cultivation_lifestyle.dds"
+}

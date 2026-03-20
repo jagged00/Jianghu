@@ -1,0 +1,99 @@
+﻿visit_mount_hua_sect_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 520
+	desc = visit_mount_hua_sect_decision_desc
+	selection_tooltip = visit_mount_hua_sect_decision_tooltip
+	confirm_text = visit_cultivation_sect_confirm
+	cooldown = { years = 3 }
+	is_shown = { has_trait = cultivation_realm }
+	is_valid = { is_adult = yes }
+	ai_will_do = { base = 0 }
+	effect = {
+		add_trait_xp = { trait = qi_gathering value = 10 }
+		add_trait_xp = { trait = foundation_establishment value = 10 }
+		add_trait_xp = { trait = core_formation value = 10 }
+		add_trait_xp = { trait = nascent_soul value = 10 }
+		add_trait_xp = { trait = spirit_severing value = 10 }
+		add_trait_xp = { trait = dao_seeking value = 10 }
+		add_trait_xp = { trait = immortal_ascension value = 10 }
+		add_character_modifier = { modifier = mount_hua_insight months = 24 }
+	}
+}
+
+visit_wudang_sect_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 521
+	desc = visit_wudang_sect_decision_desc
+	selection_tooltip = visit_wudang_sect_decision_tooltip
+	confirm_text = visit_cultivation_sect_confirm
+	cooldown = { years = 3 }
+	is_shown = { has_trait = cultivation_realm }
+	is_valid = { is_adult = yes }
+	ai_will_do = { base = 0 }
+	effect = {
+		add_trait_xp = { trait = qi_gathering value = 8 }
+		add_trait_xp = { trait = foundation_establishment value = 8 }
+		add_trait_xp = { trait = core_formation value = 8 }
+		add_trait_xp = { trait = nascent_soul value = 8 }
+		add_trait_xp = { trait = spirit_severing value = 8 }
+		add_trait_xp = { trait = dao_seeking value = 8 }
+		add_trait_xp = { trait = immortal_ascension value = 8 }
+		add_character_modifier = { modifier = wudang_clarity months = 24 }
+	}
+}
+
+visit_medicine_king_valley_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
+	decision_group_type = major
+	sort_order = 522
+	desc = visit_medicine_king_valley_decision_desc
+	selection_tooltip = visit_medicine_king_valley_decision_tooltip
+	confirm_text = visit_cultivation_sect_confirm
+	cooldown = { years = 3 }
+	is_shown = { has_trait = cultivation_realm }
+	is_valid = { is_adult = yes }
+	ai_will_do = { base = 0 }
+	effect = {
+		add_trait_xp = { trait = qi_gathering value = 6 }
+		add_trait_xp = { trait = foundation_establishment value = 6 }
+		add_trait_xp = { trait = core_formation value = 6 }
+		add_trait_xp = { trait = nascent_soul value = 6 }
+		add_trait_xp = { trait = spirit_severing value = 6 }
+		add_trait_xp = { trait = dao_seeking value = 6 }
+		add_trait_xp = { trait = immortal_ascension value = 6 }
+		add_character_modifier = { modifier = medicine_king_blessing months = 24 }
+	}
+}
+
+visit_ten_thousand_corpse_valley_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_breakthrough.dds"
+	}
+	decision_group_type = major
+	sort_order = 523
+	desc = visit_ten_thousand_corpse_valley_decision_desc
+	selection_tooltip = visit_ten_thousand_corpse_valley_decision_tooltip
+	confirm_text = visit_cultivation_sect_confirm
+	cooldown = { years = 3 }
+	is_shown = { has_trait = cultivation_realm }
+	is_valid = { is_adult = yes }
+	ai_will_do = { base = 0 }
+	effect = {
+		add_trait_xp = { trait = qi_gathering value = 12 }
+		add_trait_xp = { trait = foundation_establishment value = 12 }
+		add_trait_xp = { trait = core_formation value = 12 }
+		add_trait_xp = { trait = nascent_soul value = 12 }
+		add_trait_xp = { trait = spirit_severing value = 12 }
+		add_trait_xp = { trait = dao_seeking value = 12 }
+		add_trait_xp = { trait = immortal_ascension value = 12 }
+		add_character_modifier = { modifier = corpse_valley_tempering months = 24 }
+	}
+}

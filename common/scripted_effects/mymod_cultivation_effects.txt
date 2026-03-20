@@ -22,35 +22,8 @@ mymod_cultivation_gain_xp_effect = {
             }
         }
 
-        # Basic XP gain for everyone
-        add_trait_xp = {
-            trait = qi_gathering
-            value = 1
-        }
-        add_trait_xp = {
-            trait = foundation_establishment
-            value = 1
-        }
-        add_trait_xp = {
-            trait = core_formation
-            value = 1
-        }
-        add_trait_xp = {
-            trait = nascent_soul
-            value = 1
-        }
-        add_trait_xp = {
-            trait = spirit_severing
-            value = 1
-        }
-        add_trait_xp = {
-            trait = dao_seeking
-            value = 1
-        }
-        add_trait_xp = {
-            trait = immortal_ascension
-            value = 1
-        }
+        # Grant yearly experience only to the cultivator's current realm.
+        earn_cultivation_xp = yes
     }
 }
 

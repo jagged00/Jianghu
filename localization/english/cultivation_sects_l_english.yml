@@ -1,5 +1,8 @@
 ﻿l_english:
   join_sect_confirm:0 "Swear before the mountain gate"
+  select_cultivation_sect_decision:0 "Choose a Cultivation Sect"
+  select_cultivation_sect_decision_desc:0 "The mountain gates do not open their inheritances to every wanderer. Choose one sect, kneel, and ask to be received as a disciple. Changing sect allegiance places you under years of suspicion before another gate will accept you."
+  select_cultivation_sect_decision_tooltip:0 "Open a REF-style sect list and choose the mountain gate whose manuals you will inherit."
   sect_switch_cooldown:0 "Sect Oath Cooldown"
   sect_switch_cooldown_desc:0 "This cultivator recently changed sect allegiance and no rival mountain gate will reveal its guarded manuals for many years."
   join_mount_hua_decision:0 "Join Mount Hua Sect"

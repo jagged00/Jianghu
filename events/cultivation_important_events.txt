@@ -72,6 +72,35 @@ cultivation_important_event.002 = { #First cultivation
     }
 }
 
+
+cultivation_important_event.010 = {
+    type = character_event
+    title = cultivation_important_event.010.title
+    desc = cultivation_important_event.010.desc
+    trigger = {
+        has_character_flag = cultivation_initiated
+        NOT = { has_trait = cultivation_realm }
+    }
+    theme = faith
+    right_portrait = {
+        character = ROOT
+        animation = happiness
+    }
+
+    option = {
+        name = cultivation_important_event.010.a
+        ai_chance = { base = 2 }
+        random_list = {
+            65 = { add_trait = qi_gathering }
+            35 = { add_stress = 35 }
+        }
+    }
+    option = {
+        name = cultivation_important_event.010.b
+        ai_chance = { base = 0 }
+    }
+}
+
 #Breakthrough Events
 
 cultivation_important_event.011 = {
@@ -109,14 +138,13 @@ cultivation_important_event.011 = {
                     trait = qi_gathering
                     value = -20
                 }
+                add_stress = 25
             }
             83 = {
-                breakthrough_effect = yes
-                modifier = {
-					add = breakthrough_difficulty_modifier
-				}
+                remove_trait = qi_gathering
+                add_trait = foundation_establishment
             }
-            20 = {
+            2 = {
                 death = {
                     death_reason = death_breakthrough
                 }
@@ -140,14 +168,13 @@ cultivation_important_event.011 = {
                     trait = qi_gathering
                     value = -20
                 }
+                add_stress = 10
             }
             94 = {
-                breakthrough_effect = yes
-                modifier = {
-					add = breakthrough_difficulty_modifier
-				}
+                remove_trait = qi_gathering
+                add_trait = foundation_establishment
             }
-            20 = {
+            1 = {
                 death = {
                     death_reason = death_breakthrough
                 }
@@ -191,17 +218,16 @@ cultivation_important_event.012 = {
         random_list = {
             15 = {
                 add_trait_xp = {
-                    trait = qi_gathering
+                    trait = foundation_establishment
                     value = -20
                 }
+                add_stress = 25
             }
             83 = {
-                breakthrough_effect = yes
-                modifier = {
-					add = breakthrough_difficulty_modifier
-				}
+                remove_trait = foundation_establishment
+                add_trait = core_formation
             }
-            20 = {
+            2 = {
                 death = {
                     death_reason = death_breakthrough
                 }
@@ -222,17 +248,16 @@ cultivation_important_event.012 = {
         random_list = {
             5 = {
                 add_trait_xp = {
-                    trait = qi_gathering
+                    trait = foundation_establishment
                     value = -20
                 }
+                add_stress = 10
             }
             94 = {
-                breakthrough_effect = yes
-                modifier = {
-					add = breakthrough_difficulty_modifier
-				}
+                remove_trait = foundation_establishment
+                add_trait = core_formation
             }
-            20 = {
+            1 = {
                 death = {
                     death_reason = death_breakthrough
                 }
@@ -276,17 +301,16 @@ cultivation_important_event.013 = {
         random_list = {
             15 = {
                 add_trait_xp = {
-                    trait = qi_gathering
+                    trait = core_formation
                     value = -20
                 }
+                add_stress = 25
             }
             83 = {
-                breakthrough_effect = yes
-                modifier = {
-					add = breakthrough_difficulty_modifier
-				}
+                remove_trait = core_formation
+                add_trait = nascent_soul
             }
-            20 = {
+            2 = {
                 death = {
                     death_reason = death_breakthrough
                 }
@@ -307,17 +331,16 @@ cultivation_important_event.013 = {
         random_list = {
             5 = {
                 add_trait_xp = {
-                    trait = qi_gathering
+                    trait = core_formation
                     value = -20
                 }
+                add_stress = 10
             }
             94 = {
-                breakthrough_effect = yes
-                modifier = {
-					add = breakthrough_difficulty_modifier
-				}
+                remove_trait = core_formation
+                add_trait = nascent_soul
             }
-            20 = {
+            1 = {
                 death = {
                     death_reason = death_breakthrough
                 }
@@ -361,17 +384,16 @@ cultivation_important_event.014 = {
         random_list = {
             15 = {
                 add_trait_xp = {
-                    trait = qi_gathering
+                    trait = nascent_soul
                     value = -20
                 }
+                add_stress = 25
             }
             83 = {
-                breakthrough_effect = yes
-                modifier = {
-					add = breakthrough_difficulty_modifier
-				}
+                remove_trait = nascent_soul
+                add_trait = spirit_severing
             }
-            20 = {
+            2 = {
                 death = {
                     death_reason = death_breakthrough
                 }
@@ -392,17 +414,16 @@ cultivation_important_event.014 = {
         random_list = {
             5 = {
                 add_trait_xp = {
-                    trait = qi_gathering
+                    trait = nascent_soul
                     value = -20
                 }
+                add_stress = 10
             }
             94 = {
-                breakthrough_effect = yes
-                modifier = {
-					add = breakthrough_difficulty_modifier
-				}
+                remove_trait = nascent_soul
+                add_trait = spirit_severing
             }
-            20 = {
+            1 = {
                 death = {
                     death_reason = death_breakthrough
                 }
@@ -446,17 +467,16 @@ cultivation_important_event.015 = {
         random_list = {
             15 = {
                 add_trait_xp = {
-                    trait = qi_gathering
+                    trait = spirit_severing
                     value = -20
                 }
+                add_stress = 25
             }
             83 = {
-                breakthrough_effect = yes
-                modifier = {
-					add = breakthrough_difficulty_modifier
-				}
+                remove_trait = spirit_severing
+                add_trait = dao_seeking
             }
-            20 = {
+            2 = {
                 death = {
                     death_reason = death_breakthrough
                 }
@@ -477,17 +497,16 @@ cultivation_important_event.015 = {
         random_list = {
             5 = {
                 add_trait_xp = {
-                    trait = qi_gathering
+                    trait = spirit_severing
                     value = -20
                 }
+                add_stress = 10
             }
             94 = {
-                breakthrough_effect = yes
-                modifier = {
-					add = breakthrough_difficulty_modifier
-				}
+                remove_trait = spirit_severing
+                add_trait = dao_seeking
             }
-            20 = {
+            1 = {
                 death = {
                     death_reason = death_breakthrough
                 }
@@ -531,17 +550,16 @@ cultivation_important_event.016 = {
         random_list = {
             15 = {
                 add_trait_xp = {
-                    trait = qi_gathering
+                    trait = dao_seeking
                     value = -20
                 }
+                add_stress = 25
             }
             83 = {
-                breakthrough_effect = yes
-                modifier = {
-					add = breakthrough_difficulty_modifier
-				}
+                remove_trait = dao_seeking
+                add_trait = immortal_ascension
             }
-            20 = {
+            2 = {
                 death = {
                     death_reason = death_breakthrough
                 }
@@ -562,17 +580,16 @@ cultivation_important_event.016 = {
         random_list = {
             5 = {
                 add_trait_xp = {
-                    trait = qi_gathering
+                    trait = dao_seeking
                     value = -20
                 }
+                add_stress = 10
             }
             94 = {
-                breakthrough_effect = yes
-                modifier = {
-					add = breakthrough_difficulty_modifier
-				}
+                remove_trait = dao_seeking
+                add_trait = immortal_ascension
             }
-            20 = {
+            1 = {
                 death = {
                     death_reason = death_breakthrough
                 }

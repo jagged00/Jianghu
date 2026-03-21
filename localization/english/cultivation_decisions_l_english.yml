@@ -7,10 +7,10 @@
 
   begin_cultivation_decision:0 "Receive Sect Initiation"
   begin_cultivation_decision_desc:0 "A true sect does not hand out qi manuals to outsiders. Only after joining a mountain gate may you pay for incense, pills, and instruction to begin the long climb along the immortal path."
-  begin_cultivation_decision_selection_tooltip:0 "Only sect members may begin cultivation. Pay the initiation cost to unlock the Immortal Path tree; completing each tree grants the next realm trait."
+  begin_cultivation_decision_selection_tooltip:0 "Only sect members may begin cultivation. Pay the initiation cost to unlock the Immortal Path tree; finishing each full tree lets you attempt the next realm breakthrough event."
   begin_cultivation_decision_tooltip:0 "Pay for your initiation and begin walking the sect-controlled immortal path."
   begin_cultivation_decision_confirm:0 "Kowtow before the ancestral hall"
-  begin_cultivation_decision_effect_tooltip:0 "You become a sect initiate and may now advance by finishing cultivation perk trees."
+  begin_cultivation_decision_effect_tooltip:0 "You become a sect initiate and may now begin the long perk-tree grind toward your first breakthrough."
 
   focus_on_cultivation:0 "Enter Closed-Door Cultivation"
   focus_on_cultivation_tooltip:0 "Withdraw for several months to temper qi and deepen your realm."

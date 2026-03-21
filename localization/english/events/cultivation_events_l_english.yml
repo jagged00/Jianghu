@@ -5,6 +5,10 @@
   cultivation_important_event.001.b:0 "Burn rare reagents and force a smoother opening."
   cultivation_important_event.001.c:0 "Withdraw and prepare further."
 
+  cultivation_important_event.010.title:0 "The First Strand of Qi"
+  cultivation_important_event.010.desc:0 "After long sect tempering, your meridians finally tremble at the edge of true awakening. One final push will decide whether you step into Qi Gathering or remain an initiated mortal a little longer."
+  cultivation_important_event.010.a:0 "Gather the first strand."
+  cultivation_important_event.010.b:0 "I need more tempering before I dare this step."
   cultivation_important_event.011.title:0 "Foundation Under Heaven"
   cultivation_important_event.011.desc:0 "The gathered qi crashes through your body like a mountain torrent. If your dao heart does not waver, an immortal foundation will be born tonight."
   cultivation_important_event.011.a:0 "Break through."

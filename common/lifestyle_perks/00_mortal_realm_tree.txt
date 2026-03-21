@@ -1,4 +1,4 @@
-﻿﻿mortal_external_strengthening_perk = {
+mortal_external_strengthening_perk = {
 	lifestyle = cultivation_lifestyle
 	tree = mortal_realm_tree
 	position = { 0 0 }

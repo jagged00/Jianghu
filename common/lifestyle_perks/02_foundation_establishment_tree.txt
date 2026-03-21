@@ -1,4 +1,4 @@
-﻿﻿foundation_establishment_external_strengthening_perk = {
+foundation_establishment_external_strengthening_perk = {
 	lifestyle = cultivation_lifestyle
 	tree = foundation_establishment_tree
 	position = { 0 0 }

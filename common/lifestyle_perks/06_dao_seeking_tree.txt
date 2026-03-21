@@ -1,4 +1,4 @@
-﻿﻿dao_seeking_external_strengthening_perk = {
+dao_seeking_external_strengthening_perk = {
 	lifestyle = cultivation_lifestyle
 	tree = dao_seeking_tree
 	position = { 0 0 }

@@ -1,4 +1,4 @@
-﻿can_gain_qi_gathering = {
+can_gain_qi_gathering = {
 	is_adult = yes
 	is_alive = yes
 	NOT = { has_trait = cultivation_realm }

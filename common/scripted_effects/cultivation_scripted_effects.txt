@@ -1,4 +1,4 @@
-﻿#Start of Cultivation Event Effects
+#Start of Cultivation Event Effects
 
 #CURRENTLY NOT IN USE
 start_cultivating_event_effect = {

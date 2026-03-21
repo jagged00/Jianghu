@@ -1,50 +1,35 @@
-﻿l_english:
-#Realms
-#Qi Gathering
-
+l_english:
   trait_qi_gathering:0 "Qi Gathering"
-  trait_qi_gathering_desc:0 "This character is in the Qi Gathering Realm"
-  trait_track_stage:0 "Stages"
-  trait_track_stage_desc:0 "The stages of the Qi Gathering Realm"
-
-#Foundation Establishment
+  trait_qi_gathering_desc:0 "This character has only just opened the immortal road, drawing stray strands of heaven-and-earth qi into the dantian."
+  trait_track_stage:0 "Minor Realms"
+  trait_track_stage_desc:0 "Each breath, each cycle, and each insight deepens this character's first foundation in cultivation."
 
   trait_foundation_establishment:0 "Foundation Establishment"
-  trait_foundation_establishment_desc:0 "This character is in the Foundation Establishment Realm"
-  trait_track_foundation:0 "Foundation"
-  trait_track_foundation_desc:0 "The stages of the Foundation Establishment Realm"
-
-#Core Formation
+  trait_foundation_establishment_desc:0 "This character has forged a true foundation, cleansing mortal impurities and anchoring the dao heart for greater heights."
+  trait_track_foundation:0 "Foundation Tempering"
+  trait_track_foundation_desc:0 "The spirit platform is refined layer by layer until it can bear the weight of heaven's will."
 
   trait_core_formation:0 "Core Formation"
-  trait_core_formation_desc:0 "This character is in the Core Formation Realm"
-  trait_track_core:0 "Core"
-  trait_track_core_desc:0 "The stages of the Core Formation Realm"
-
-#Nascent Soul
+  trait_core_formation_desc:0 "This character has condensed a radiant core, binding essence and will into a furnace of immortal potential."
+  trait_track_core:0 "Core Tempering"
+  trait_track_core_desc:0 "Every turn of qi tempers the golden core until it shines like a miniature sun."
 
   trait_nascent_soul:0 "Nascent Soul"
-  trait_nascent_soul_desc:0 "This character is in the Nascent Soul Realm"
-  trait_track_soul:0 "Soul"
-  trait_track_suol_desc:0 "The stages of the Nascent Soul Realm"
-
-#Spirit Severing
+  trait_nascent_soul_desc:0 "This character's spirit has shed its mortal shell and taken shape as a nascent soul, a beacon against the storms of fate."
+  trait_track_soul:0 "Soul Nurture"
+  trait_track_soul_desc:0 "The nascent soul grows clearer, stronger, and nearer to true transcendence with every insight."
 
   trait_spirit_severing:0 "Spirit Severing"
-  trait_spirit_severing_desc:0 "This character is in the Spirit Severing Realm"
+  trait_spirit_severing_desc:0 "This character has severed shackles of self and karma, cutting through fear, attachment, and mortal limitation."
   trait_track_spirit:0 "Severing"
-  trait_track_spirit_desc:0 "The stages of the Spirit Severing Realm"
-
-  #Dao Seeking
+  trait_track_spirit_desc:0 "Each severed attachment frees more of the true spirit from worldly dust."
 
   trait_dao_seeking:0 "Dao Seeking"
-  trait_dao_seeking_desc:0 "This character is in the Dao Seeking Realm"
-  trait_track_dao:0 "Dao"
-  trait_track_dao_desc:0 "The stages of the Dao Seeking Realm"
-
-  #Immortal Ascension
+  trait_dao_seeking_desc:0 "This character walks at the edge of heavenly mystery, pursuing truths that lesser cultivators can scarcely endure to behold."
+  trait_track_dao:0 "Dao Insight"
+  trait_track_dao_desc:0 "Fleeting revelations are hammered into enduring comprehension of the Great Dao."
 
   trait_immortal_ascension:0 "Immortal Ascension"
-  trait_immortal_ascension_desc:0 "This character is in the Immortal Ascension Realm"
-  trait_track_ascension:0 "Immortal"
-  trait_track_ascension_desc:0 "The stages of the Immortal Ascension Realm"
+  trait_immortal_ascension_desc:0 "This character has stepped beyond the mortal coil, touching the threshold where immortals contend and heavenly laws bend."
+  trait_track_ascension:0 "Immortal Steps"
+  trait_track_ascension_desc:0 "Each step forward deepens this character's claim upon eternity itself."

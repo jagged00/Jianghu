@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  
  teach_cultivation_interaction:0 "Teach Cultivation"
  teach_cultivation_interaction_desc:0 "Teach [recipient.GetShortUINameNoTooltip] Cultivation"

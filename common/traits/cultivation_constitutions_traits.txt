@@ -1,4 +1,4 @@
-﻿yang_constitution = {
+yang_constitution = {
 	index = 15250
 	ruler_designer_cost = 500						# heaven-defying body, not cheap
 	birth = 0.001									# 1 in 100,000 mortals

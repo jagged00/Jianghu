@@ -1,4 +1,4 @@
-﻿# events/xianxia_cultivation_events.txt
+# events/xianxia_cultivation_events.txt
 
 namespace = xianxia_cult
 

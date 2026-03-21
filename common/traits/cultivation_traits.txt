@@ -1,4 +1,4 @@
-﻿# common/traits/cultivation_traits.txt
+# common/traits/cultivation_traits.txt
 # Fully fixed & compatible + proper structure
 
 qi_gathering = {

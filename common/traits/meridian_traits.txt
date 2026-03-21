@@ -1,4 +1,4 @@
-﻿# common/traits/meridian_traits.txt
+# common/traits/meridian_traits.txt
 poor_meridians = {
 	index = 14250
 	group = active_meridians

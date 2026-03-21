@@ -1,4 +1,4 @@
-﻿# ===================================================================
+# ===================================================================
 # VASSAL VERSION — Add Conqueror Trait + Pressed Claim on Liege's Title (NO WAR)
 # ===================================================================
 claim_heavenly_mandate_vassal_decision = {
@@ -244,7 +244,7 @@ purify_mortal_shell_decision = {
         }
     }
 
-    is_valid = { always = yes }
+    is_valid = { is_cultivator = yes }
 
     ai_check_interval = 60
     ai_potential = { always = yes }
@@ -326,6 +326,7 @@ grant_qi_gathering_to_meridian_holders_decision = {
     selection_tooltip = qi_gathering_granted_tooltip
 
     is_shown = {
+        is_cultivator = yes
         OR = {
             is_ruler = yes
             is_court_chaplain = yes
@@ -338,7 +339,7 @@ grant_qi_gathering_to_meridian_holders_decision = {
         }
     }
 
-    is_valid = { always = yes }
+    is_valid = { is_cultivator = yes }
 
     ai_check_interval = 60
     ai_potential = { always = yes }

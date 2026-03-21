@@ -1,4 +1,4 @@
-﻿
+
 on_combat_end_winner = {
 	on_actions = {
 		cultivation_xp_on_actions

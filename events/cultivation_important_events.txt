@@ -68,8 +68,7 @@ cultivation_important_event.002 = { #First cultivation
     #TODO: figure out how to add a effect to character to reduce diplomacy and after a few days it gets the trait instead
 
     immediate = {
-        
-        add_trait = qi_gathering
+        add_character_flag = cultivation_initiated
     }
 }
 

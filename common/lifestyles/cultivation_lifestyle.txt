@@ -1,6 +1,10 @@
-﻿cultivation_lifestyle = {
+﻿﻿cultivation_lifestyle = {
 	is_highlighted = {
-		has_trait = cultivation_realm
+		OR = {
+			has_trait = cultivation_realm
+			has_character_flag = cultivation_initiated
+			has_character_flag = joined_any_cultivation_sect
+		}
 	}
 	xp_per_level = 1000
 	base_xp_gain = 25

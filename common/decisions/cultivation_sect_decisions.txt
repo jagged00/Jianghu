@@ -1,99 +1,2574 @@
-﻿visit_mount_hua_sect_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
-	}
-	decision_group_type = major
-	sort_order = 520
-	desc = visit_mount_hua_sect_decision_desc
-	selection_tooltip = visit_mount_hua_sect_decision_tooltip
-	confirm_text = visit_cultivation_sect_confirm
-	cooldown = { years = 3 }
-	is_shown = { has_trait = cultivation_realm }
-	is_valid = { is_adult = yes }
-	ai_will_do = { base = 0 }
-	effect = {
-		add_trait_xp = { trait = qi_gathering value = 10 }
-		add_trait_xp = { trait = foundation_establishment value = 10 }
-		add_trait_xp = { trait = core_formation value = 10 }
-		add_trait_xp = { trait = nascent_soul value = 10 }
-		add_trait_xp = { trait = spirit_severing value = 10 }
-		add_trait_xp = { trait = dao_seeking value = 10 }
-		add_trait_xp = { trait = immortal_ascension value = 10 }
-		add_character_modifier = { modifier = mount_hua_insight months = 24 }
-	}
-}
+﻿
+    join_mount_hua_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_mount_hua_decision_desc
+    	selection_tooltip = join_mount_hua_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = mount_hua_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = mount_hua_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = mount_hua_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = mount_hua_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = mount_hua_training months = 36 }
+    	}
+    }
 
-visit_wudang_sect_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
-	}
-	decision_group_type = major
-	sort_order = 521
-	desc = visit_wudang_sect_decision_desc
-	selection_tooltip = visit_wudang_sect_decision_tooltip
-	confirm_text = visit_cultivation_sect_confirm
-	cooldown = { years = 3 }
-	is_shown = { has_trait = cultivation_realm }
-	is_valid = { is_adult = yes }
-	ai_will_do = { base = 0 }
-	effect = {
-		add_trait_xp = { trait = qi_gathering value = 8 }
-		add_trait_xp = { trait = foundation_establishment value = 8 }
-		add_trait_xp = { trait = core_formation value = 8 }
-		add_trait_xp = { trait = nascent_soul value = 8 }
-		add_trait_xp = { trait = spirit_severing value = 8 }
-		add_trait_xp = { trait = dao_seeking value = 8 }
-		add_trait_xp = { trait = immortal_ascension value = 8 }
-		add_character_modifier = { modifier = wudang_clarity months = 24 }
-	}
-}
+    join_heavenly_sword_pavilion_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_heavenly_sword_pavilion_decision_desc
+    	selection_tooltip = join_heavenly_sword_pavilion_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = heavenly_sword_pavilion_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = heavenly_sword_pavilion_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = heavenly_sword_pavilion_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = heavenly_sword_pavilion_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = heavenly_sword_pavilion_training months = 36 }
+    	}
+    }
 
-visit_medicine_king_valley_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
-	}
-	decision_group_type = major
-	sort_order = 522
-	desc = visit_medicine_king_valley_decision_desc
-	selection_tooltip = visit_medicine_king_valley_decision_tooltip
-	confirm_text = visit_cultivation_sect_confirm
-	cooldown = { years = 3 }
-	is_shown = { has_trait = cultivation_realm }
-	is_valid = { is_adult = yes }
-	ai_will_do = { base = 0 }
-	effect = {
-		add_trait_xp = { trait = qi_gathering value = 6 }
-		add_trait_xp = { trait = foundation_establishment value = 6 }
-		add_trait_xp = { trait = core_formation value = 6 }
-		add_trait_xp = { trait = nascent_soul value = 6 }
-		add_trait_xp = { trait = spirit_severing value = 6 }
-		add_trait_xp = { trait = dao_seeking value = 6 }
-		add_trait_xp = { trait = immortal_ascension value = 6 }
-		add_character_modifier = { modifier = medicine_king_blessing months = 24 }
-	}
-}
+    join_ten_thousand_swords_valley_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_ten_thousand_swords_valley_decision_desc
+    	selection_tooltip = join_ten_thousand_swords_valley_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = ten_thousand_swords_valley_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = ten_thousand_swords_valley_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = ten_thousand_swords_valley_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = ten_thousand_swords_valley_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = ten_thousand_swords_valley_training months = 36 }
+    	}
+    }
 
-visit_ten_thousand_corpse_valley_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_breakthrough.dds"
-	}
-	decision_group_type = major
-	sort_order = 523
-	desc = visit_ten_thousand_corpse_valley_decision_desc
-	selection_tooltip = visit_ten_thousand_corpse_valley_decision_tooltip
-	confirm_text = visit_cultivation_sect_confirm
-	cooldown = { years = 3 }
-	is_shown = { has_trait = cultivation_realm }
-	is_valid = { is_adult = yes }
-	ai_will_do = { base = 0 }
-	effect = {
-		add_trait_xp = { trait = qi_gathering value = 12 }
-		add_trait_xp = { trait = foundation_establishment value = 12 }
-		add_trait_xp = { trait = core_formation value = 12 }
-		add_trait_xp = { trait = nascent_soul value = 12 }
-		add_trait_xp = { trait = spirit_severing value = 12 }
-		add_trait_xp = { trait = dao_seeking value = 12 }
-		add_trait_xp = { trait = immortal_ascension value = 12 }
-		add_character_modifier = { modifier = corpse_valley_tempering months = 24 }
-	}
-}
+    join_violet_thunder_blade_sect_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_violet_thunder_blade_sect_decision_desc
+    	selection_tooltip = join_violet_thunder_blade_sect_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = violet_thunder_blade_sect_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = violet_thunder_blade_sect_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = violet_thunder_blade_sect_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = violet_thunder_blade_sect_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = violet_thunder_blade_sect_training months = 36 }
+    	}
+    }
+
+    join_nine_star_formation_sect_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_nine_star_formation_sect_decision_desc
+    	selection_tooltip = join_nine_star_formation_sect_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = nine_star_formation_sect_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = nine_star_formation_sect_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = nine_star_formation_sect_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = nine_star_formation_sect_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = nine_star_formation_sect_training months = 36 }
+    	}
+    }
+
+    join_mystic_seal_pavilion_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_mystic_seal_pavilion_decision_desc
+    	selection_tooltip = join_mystic_seal_pavilion_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = mystic_seal_pavilion_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = mystic_seal_pavilion_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = mystic_seal_pavilion_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = mystic_seal_pavilion_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = mystic_seal_pavilion_training months = 36 }
+    	}
+    }
+
+    join_wudang_sect_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_wudang_sect_decision_desc
+    	selection_tooltip = join_wudang_sect_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = wudang_sect_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = wudang_sect_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = wudang_sect_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = wudang_sect_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = wudang_clarity months = 36 }
+    	}
+    }
+
+    join_shaolin_temple_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_shaolin_temple_decision_desc
+    	selection_tooltip = join_shaolin_temple_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = shaolin_temple_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = shaolin_temple_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = shaolin_temple_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = shaolin_temple_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = shaolin_temple_training months = 36 }
+    	}
+    }
+
+    join_eternal_harmony_pavilion_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_eternal_harmony_pavilion_decision_desc
+    	selection_tooltip = join_eternal_harmony_pavilion_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = eternal_harmony_pavilion_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = eternal_harmony_pavilion_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = eternal_harmony_pavilion_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = eternal_harmony_pavilion_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = eternal_harmony_pavilion_training months = 36 }
+    	}
+    }
+
+    join_divine_beast_mountain_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_divine_beast_mountain_decision_desc
+    	selection_tooltip = join_divine_beast_mountain_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = divine_beast_mountain_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = divine_beast_mountain_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = divine_beast_mountain_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = divine_beast_mountain_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = divine_beast_mountain_training months = 36 }
+    	}
+    }
+
+    join_thousand_beast_valley_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_thousand_beast_valley_decision_desc
+    	selection_tooltip = join_thousand_beast_valley_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = thousand_beast_valley_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = thousand_beast_valley_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = thousand_beast_valley_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = thousand_beast_valley_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = thousand_beast_valley_training months = 36 }
+    	}
+    }
+
+    join_crimson_moon_blade_hall_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_crimson_moon_blade_hall_decision_desc
+    	selection_tooltip = join_crimson_moon_blade_hall_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = crimson_moon_blade_hall_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = crimson_moon_blade_hall_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = crimson_moon_blade_hall_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = crimson_moon_blade_hall_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = crimson_moon_blade_hall_training months = 36 }
+    	}
+    }
+
+    join_tyrant_saber_palace_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_tyrant_saber_palace_decision_desc
+    	selection_tooltip = join_tyrant_saber_palace_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = tyrant_saber_palace_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = tyrant_saber_palace_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = tyrant_saber_palace_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = tyrant_saber_palace_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = tyrant_saber_palace_training months = 36 }
+    	}
+    }
+
+    join_demon_suppressing_blade_clan_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_demon_suppressing_blade_clan_decision_desc
+    	selection_tooltip = join_demon_suppressing_blade_clan_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = demon_suppressing_blade_clan_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = demon_suppressing_blade_clan_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = demon_suppressing_blade_clan_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = demon_suppressing_blade_clan_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = demon_suppressing_blade_clan_training months = 36 }
+    	}
+    }
+
+    join_medicine_king_valley_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_medicine_king_valley_decision_desc
+    	selection_tooltip = join_medicine_king_valley_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = medicine_king_valley_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = medicine_king_valley_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = medicine_king_valley_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = medicine_king_valley_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = medicine_king_blessing months = 36 }
+    	}
+    }
+
+    join_hundred_herbs_pavilion_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_hundred_herbs_pavilion_decision_desc
+    	selection_tooltip = join_hundred_herbs_pavilion_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = hundred_herbs_pavilion_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = hundred_herbs_pavilion_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = hundred_herbs_pavilion_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = hundred_herbs_pavilion_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = hundred_herbs_pavilion_training months = 36 }
+    	}
+    }
+
+    join_jade_chamber_sect_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_jade_chamber_sect_decision_desc
+    	selection_tooltip = join_jade_chamber_sect_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = jade_chamber_sect_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = jade_chamber_sect_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = jade_chamber_sect_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = jade_chamber_sect_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = jade_chamber_sect_training months = 36 }
+    	}
+    }
+
+    join_moonless_night_pavilion_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_moonless_night_pavilion_decision_desc
+    	selection_tooltip = join_moonless_night_pavilion_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = moonless_night_pavilion_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = moonless_night_pavilion_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = moonless_night_pavilion_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = moonless_night_pavilion_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = moonless_night_pavilion_training months = 36 }
+    	}
+    }
+
+    join_pale_bone_hall_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_pale_bone_hall_decision_desc
+    	selection_tooltip = join_pale_bone_hall_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = pale_bone_hall_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = pale_bone_hall_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = pale_bone_hall_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = pale_bone_hall_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = pale_bone_hall_training months = 36 }
+    	}
+    }
+
+    join_eternal_rest_clan_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_eternal_rest_clan_decision_desc
+    	selection_tooltip = join_eternal_rest_clan_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = eternal_rest_clan_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = eternal_rest_clan_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = eternal_rest_clan_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = eternal_rest_clan_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = eternal_rest_clan_training months = 36 }
+    	}
+    }
+
+    join_ten_thousand_corpse_valley_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_ten_thousand_corpse_valley_decision_desc
+    	selection_tooltip = join_ten_thousand_corpse_valley_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = ten_thousand_corpse_valley_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = ten_thousand_corpse_valley_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = ten_thousand_corpse_valley_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = ten_thousand_corpse_valley_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = corpse_valley_tempering months = 36 }
+    	}
+    }
+
+    join_venomous_serpent_valley_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_venomous_serpent_valley_decision_desc
+    	selection_tooltip = join_venomous_serpent_valley_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = venomous_serpent_valley_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = venomous_serpent_valley_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = venomous_serpent_valley_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = venomous_serpent_valley_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = venomous_serpent_valley_training months = 36 }
+    	}
+    }
+
+    join_blood_yin_cult_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_blood_yin_cult_decision_desc
+    	selection_tooltip = join_blood_yin_cult_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = blood_yin_cult_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = blood_yin_cult_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = blood_yin_cult_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = blood_yin_cult_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = blood_yin_cult_training months = 36 }
+    	}
+    }
+
+    join_blood_moon_demonic_sect_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_blood_moon_demonic_sect_decision_desc
+    	selection_tooltip = join_blood_moon_demonic_sect_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = blood_moon_demonic_sect_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = blood_moon_demonic_sect_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = blood_moon_demonic_sect_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = blood_moon_demonic_sect_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = blood_moon_demonic_sect_training months = 36 }
+    	}
+    }
+
+    join_succubus_palace_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_succubus_palace_decision_desc
+    	selection_tooltip = join_succubus_palace_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = succubus_palace_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = succubus_palace_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = succubus_palace_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = succubus_palace_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = succubus_palace_training months = 36 }
+    	}
+    }
+
+    join_lone_wolf_wanderers_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_lone_wolf_wanderers_decision_desc
+    	selection_tooltip = join_lone_wolf_wanderers_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = lone_wolf_wanderers_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = lone_wolf_wanderers_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = lone_wolf_wanderers_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = lone_wolf_wanderers_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = lone_wolf_wanderers_training months = 36 }
+    	}
+    }
+
+    join_vagrant_blade_brotherhood_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_vagrant_blade_brotherhood_decision_desc
+    	selection_tooltip = join_vagrant_blade_brotherhood_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = vagrant_blade_brotherhood_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = vagrant_blade_brotherhood_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = vagrant_blade_brotherhood_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = vagrant_blade_brotherhood_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = vagrant_blade_brotherhood_training months = 36 }
+    	}
+    }
+
+    join_thousand_treasures_pavilion_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_thousand_treasures_pavilion_decision_desc
+    	selection_tooltip = join_thousand_treasures_pavilion_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = thousand_treasures_pavilion_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = thousand_treasures_pavilion_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = thousand_treasures_pavilion_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = thousand_treasures_pavilion_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = thousand_treasures_pavilion_training months = 36 }
+    	}
+    }
+
+    join_mystic_forge_hall_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_mystic_forge_hall_decision_desc
+    	selection_tooltip = join_mystic_forge_hall_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = mystic_forge_hall_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = mystic_forge_hall_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = mystic_forge_hall_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = mystic_forge_hall_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = mystic_forge_hall_training months = 36 }
+    	}
+    }
+
+    join_ancient_relic_sect_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_ancient_relic_sect_decision_desc
+    	selection_tooltip = join_ancient_relic_sect_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = ancient_relic_sect_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = ancient_relic_sect_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = ancient_relic_sect_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = ancient_relic_sect_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = ancient_relic_sect_training months = 36 }
+    	}
+    }
+
+    join_primal_beast_sect_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_primal_beast_sect_decision_desc
+    	selection_tooltip = join_primal_beast_sect_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = primal_beast_sect_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = primal_beast_sect_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = primal_beast_sect_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = primal_beast_sect_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = primal_beast_sect_training months = 36 }
+    	}
+    }
+
+    join_primordial_chaos_hall_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_primordial_chaos_hall_decision_desc
+    	selection_tooltip = join_primordial_chaos_hall_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = primordial_chaos_hall_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = primordial_chaos_hall_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = primordial_chaos_hall_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = primordial_chaos_hall_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = primordial_chaos_hall_training months = 36 }
+    	}
+    }
+
+    join_feral_bond_sect_decision = {
+    	picture = {
+    		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+    	}
+    	decision_group_type = major
+    	sort_order = 540
+    	desc = join_feral_bond_sect_decision_desc
+    	selection_tooltip = join_feral_bond_sect_decision_tooltip
+    	confirm_text = join_sect_confirm
+    	cooldown = { years = 15 }
+    	is_shown = {
+    		is_adult = yes
+    		OR = {
+    			NOT = { has_character_flag = sect_switch_cooldown }
+    			has_character_flag = feral_bond_sect_disciple
+    		}
+    	}
+    	is_valid = {
+    		has_trait = active_meridians
+    		OR = {
+    			has_character_flag = feral_bond_sect_disciple
+    			AND = {
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    				NOT = { has_character_flag = sect_switch_cooldown }
+    			}
+    		}
+    	}
+    		ai_will_do = {
+			base = 10
+			modifier = {
+				add = chance_to_cultivate
+				is_adult = yes
+			}
+		}
+    	effect = {
+    		if = {
+    			limit = { NOT = { has_character_flag = feral_bond_sect_disciple } }
+			remove_character_flag = mount_hua_disciple
+			remove_character_flag = heavenly_sword_pavilion_disciple
+			remove_character_flag = ten_thousand_swords_valley_disciple
+			remove_character_flag = violet_thunder_blade_sect_disciple
+			remove_character_flag = nine_star_formation_sect_disciple
+			remove_character_flag = mystic_seal_pavilion_disciple
+			remove_character_flag = wudang_sect_disciple
+			remove_character_flag = shaolin_temple_disciple
+			remove_character_flag = eternal_harmony_pavilion_disciple
+			remove_character_flag = divine_beast_mountain_disciple
+			remove_character_flag = thousand_beast_valley_disciple
+			remove_character_flag = crimson_moon_blade_hall_disciple
+			remove_character_flag = tyrant_saber_palace_disciple
+			remove_character_flag = demon_suppressing_blade_clan_disciple
+			remove_character_flag = medicine_king_valley_disciple
+			remove_character_flag = hundred_herbs_pavilion_disciple
+			remove_character_flag = jade_chamber_sect_disciple
+			remove_character_flag = moonless_night_pavilion_disciple
+			remove_character_flag = pale_bone_hall_disciple
+			remove_character_flag = eternal_rest_clan_disciple
+			remove_character_flag = ten_thousand_corpse_valley_disciple
+			remove_character_flag = venomous_serpent_valley_disciple
+			remove_character_flag = blood_yin_cult_disciple
+			remove_character_flag = blood_moon_demonic_sect_disciple
+			remove_character_flag = succubus_palace_disciple
+			remove_character_flag = lone_wolf_wanderers_disciple
+			remove_character_flag = vagrant_blade_brotherhood_disciple
+			remove_character_flag = thousand_treasures_pavilion_disciple
+			remove_character_flag = mystic_forge_hall_disciple
+			remove_character_flag = ancient_relic_sect_disciple
+			remove_character_flag = primal_beast_sect_disciple
+			remove_character_flag = primordial_chaos_hall_disciple
+			remove_character_flag = feral_bond_sect_disciple
+    			add_character_flag = joined_any_cultivation_sect
+    			add_character_flag = feral_bond_sect_disciple
+    			add_character_flag = { flag = sect_switch_cooldown years = 15 }
+    		}
+    		add_character_modifier = { modifier = feral_bond_sect_training months = 36 }
+    	}
+    }

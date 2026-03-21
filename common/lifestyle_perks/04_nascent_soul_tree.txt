@@ -1,0 +1,110 @@
+﻿nascent_soul_soul_nurture_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = nascent_soul_tree
+	position = { 0 0 }
+	can_be_picked = {
+		has_trait = nascent_soul
+	}
+	icon = node_cultivation
+	character_modifier = {
+		prowess = 4
+		learning = 3
+		health = 1.5
+	}
+}
+
+nascent_soul_divine_sense_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = nascent_soul_tree
+	position = { 2 1 }
+	can_be_picked = {
+		has_trait = nascent_soul
+	}
+	icon = node_cultivation
+	parent = nascent_soul_soul_nurture_perk
+	character_modifier = {
+		learning = 2
+		intrigue = 1
+	}
+}
+
+nascent_soul_body_manifestation_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = nascent_soul_tree
+	position = { 0 2 }
+	can_be_picked = {
+		has_trait = nascent_soul
+	}
+	icon = node_cultivation
+	parent = nascent_soul_soul_nurture_perk
+	character_modifier = {
+		prowess = 2
+		health = 0.5
+	}
+}
+
+nascent_soul_internal_resonance_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = nascent_soul_tree
+	position = { 2 3 }
+	can_be_picked = {
+		has_trait = nascent_soul
+	}
+	icon = node_cultivation
+	parent = nascent_soul_divine_sense_perk
+	character_modifier = {
+		learning = 2
+		health = 0.5
+	}
+}
+
+nascent_soul_external_resonance_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = nascent_soul_tree
+	position = { 0 4 }
+	can_be_picked = {
+		has_trait = nascent_soul
+	}
+	icon = node_cultivation
+	parent = nascent_soul_body_manifestation_perk
+	character_modifier = {
+		prowess = 2
+		advantage = 5
+	}
+}
+
+nascent_soul_peak_manifestation_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = nascent_soul_tree
+	position = { 2 4 }
+	can_be_picked = {
+		has_trait = nascent_soul
+	}
+	icon = node_cultivation
+	parent = nascent_soul_internal_resonance_perk
+	parent = nascent_soul_external_resonance_perk
+	character_modifier = {
+		prowess = 5
+		learning = 4
+		health = 2.0
+	}
+}
+
+nascent_soul_spirit_severing_breakthrough_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = nascent_soul_tree
+	position = { 0 4 }
+	can_be_picked = {
+		has_trait = nascent_soul
+	}
+	icon = dao_seeking
+	parent = nascent_soul_peak_manifestation_perk
+	trait = spirit_severing
+	effect = { }
+	character_modifier = {
+		prowess = 6
+		learning = 4
+		health = 2.5
+		monthly_prestige = 1.0
+	}
+}

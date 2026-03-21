@@ -1,0 +1,1688 @@
+﻿select_cultivation_sect_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 540
+	desc = select_cultivation_sect_decision_desc
+	selection_tooltip = select_cultivation_sect_decision_tooltip
+	confirm_text = join_sect_confirm
+	ai_check_interval = 0
+	ai_potential = { always = no }
+	is_shown = {
+		is_ai = no
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = joined_any_cultivation_sect
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = joined_any_cultivation_sect
+		}
+	}
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "SELECT_ACTION"
+		show_from_start = yes
+		item = {
+			value = join_mount_hua
+			current_description = join_mount_hua_decision_tooltip
+			localization = join_mount_hua_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_heavenly_sword_pavilion
+			current_description = join_heavenly_sword_pavilion_decision_tooltip
+			localization = join_heavenly_sword_pavilion_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_ten_thousand_swords_valley
+			current_description = join_ten_thousand_swords_valley_decision_tooltip
+			localization = join_ten_thousand_swords_valley_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_violet_thunder_blade_sect
+			current_description = join_violet_thunder_blade_sect_decision_tooltip
+			localization = join_violet_thunder_blade_sect_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_nine_star_formation_sect
+			current_description = join_nine_star_formation_sect_decision_tooltip
+			localization = join_nine_star_formation_sect_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_mystic_seal_pavilion
+			current_description = join_mystic_seal_pavilion_decision_tooltip
+			localization = join_mystic_seal_pavilion_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_wudang_sect
+			current_description = join_wudang_sect_decision_tooltip
+			localization = join_wudang_sect_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_shaolin_temple
+			current_description = join_shaolin_temple_decision_tooltip
+			localization = join_shaolin_temple_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_eternal_harmony_pavilion
+			current_description = join_eternal_harmony_pavilion_decision_tooltip
+			localization = join_eternal_harmony_pavilion_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_divine_beast_mountain
+			current_description = join_divine_beast_mountain_decision_tooltip
+			localization = join_divine_beast_mountain_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_thousand_beast_valley
+			current_description = join_thousand_beast_valley_decision_tooltip
+			localization = join_thousand_beast_valley_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_crimson_moon_blade_hall
+			current_description = join_crimson_moon_blade_hall_decision_tooltip
+			localization = join_crimson_moon_blade_hall_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_tyrant_saber_palace
+			current_description = join_tyrant_saber_palace_decision_tooltip
+			localization = join_tyrant_saber_palace_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_demon_suppressing_blade_clan
+			current_description = join_demon_suppressing_blade_clan_decision_tooltip
+			localization = join_demon_suppressing_blade_clan_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_medicine_king_valley
+			current_description = join_medicine_king_valley_decision_tooltip
+			localization = join_medicine_king_valley_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_hundred_herbs_pavilion
+			current_description = join_hundred_herbs_pavilion_decision_tooltip
+			localization = join_hundred_herbs_pavilion_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_jade_chamber_sect
+			current_description = join_jade_chamber_sect_decision_tooltip
+			localization = join_jade_chamber_sect_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_moonless_night_pavilion
+			current_description = join_moonless_night_pavilion_decision_tooltip
+			localization = join_moonless_night_pavilion_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_pale_bone_hall
+			current_description = join_pale_bone_hall_decision_tooltip
+			localization = join_pale_bone_hall_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_eternal_rest_clan
+			current_description = join_eternal_rest_clan_decision_tooltip
+			localization = join_eternal_rest_clan_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_ten_thousand_corpse_valley
+			current_description = join_ten_thousand_corpse_valley_decision_tooltip
+			localization = join_ten_thousand_corpse_valley_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_venomous_serpent_valley
+			current_description = join_venomous_serpent_valley_decision_tooltip
+			localization = join_venomous_serpent_valley_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_blood_yin_cult
+			current_description = join_blood_yin_cult_decision_tooltip
+			localization = join_blood_yin_cult_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_blood_moon_demonic_sect
+			current_description = join_blood_moon_demonic_sect_decision_tooltip
+			localization = join_blood_moon_demonic_sect_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_succubus_palace
+			current_description = join_succubus_palace_decision_tooltip
+			localization = join_succubus_palace_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_lone_wolf_wanderers
+			current_description = join_lone_wolf_wanderers_decision_tooltip
+			localization = join_lone_wolf_wanderers_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_vagrant_blade_brotherhood
+			current_description = join_vagrant_blade_brotherhood_decision_tooltip
+			localization = join_vagrant_blade_brotherhood_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_thousand_treasures_pavilion
+			current_description = join_thousand_treasures_pavilion_decision_tooltip
+			localization = join_thousand_treasures_pavilion_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_mystic_forge_hall
+			current_description = join_mystic_forge_hall_decision_tooltip
+			localization = join_mystic_forge_hall_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_ancient_relic_sect
+			current_description = join_ancient_relic_sect_decision_tooltip
+			localization = join_ancient_relic_sect_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_primal_beast_sect
+			current_description = join_primal_beast_sect_decision_tooltip
+			localization = join_primal_beast_sect_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_primordial_chaos_hall
+			current_description = join_primordial_chaos_hall_decision_tooltip
+			localization = join_primordial_chaos_hall_decision
+			ai_chance = { value = 0 }
+		}
+		item = {
+			value = join_feral_bond_sect
+			current_description = join_feral_bond_sect_decision_tooltip
+			localization = join_feral_bond_sect_decision
+			ai_chance = { value = 0 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { scope:join_mount_hua = yes }
+				join_mount_hua_effect = yes
+			}
+			if = {
+				limit = { scope:join_heavenly_sword_pavilion = yes }
+				join_heavenly_sword_pavilion_effect = yes
+			}
+			if = {
+				limit = { scope:join_ten_thousand_swords_valley = yes }
+				join_ten_thousand_swords_valley_effect = yes
+			}
+			if = {
+				limit = { scope:join_violet_thunder_blade_sect = yes }
+				join_violet_thunder_blade_sect_effect = yes
+			}
+			if = {
+				limit = { scope:join_nine_star_formation_sect = yes }
+				join_nine_star_formation_sect_effect = yes
+			}
+			if = {
+				limit = { scope:join_mystic_seal_pavilion = yes }
+				join_mystic_seal_pavilion_effect = yes
+			}
+			if = {
+				limit = { scope:join_wudang_sect = yes }
+				join_wudang_sect_effect = yes
+			}
+			if = {
+				limit = { scope:join_shaolin_temple = yes }
+				join_shaolin_temple_effect = yes
+			}
+			if = {
+				limit = { scope:join_eternal_harmony_pavilion = yes }
+				join_eternal_harmony_pavilion_effect = yes
+			}
+			if = {
+				limit = { scope:join_divine_beast_mountain = yes }
+				join_divine_beast_mountain_effect = yes
+			}
+			if = {
+				limit = { scope:join_thousand_beast_valley = yes }
+				join_thousand_beast_valley_effect = yes
+			}
+			if = {
+				limit = { scope:join_crimson_moon_blade_hall = yes }
+				join_crimson_moon_blade_hall_effect = yes
+			}
+			if = {
+				limit = { scope:join_tyrant_saber_palace = yes }
+				join_tyrant_saber_palace_effect = yes
+			}
+			if = {
+				limit = { scope:join_demon_suppressing_blade_clan = yes }
+				join_demon_suppressing_blade_clan_effect = yes
+			}
+			if = {
+				limit = { scope:join_medicine_king_valley = yes }
+				join_medicine_king_valley_effect = yes
+			}
+			if = {
+				limit = { scope:join_hundred_herbs_pavilion = yes }
+				join_hundred_herbs_pavilion_effect = yes
+			}
+			if = {
+				limit = { scope:join_jade_chamber_sect = yes }
+				join_jade_chamber_sect_effect = yes
+			}
+			if = {
+				limit = { scope:join_moonless_night_pavilion = yes }
+				join_moonless_night_pavilion_effect = yes
+			}
+			if = {
+				limit = { scope:join_pale_bone_hall = yes }
+				join_pale_bone_hall_effect = yes
+			}
+			if = {
+				limit = { scope:join_eternal_rest_clan = yes }
+				join_eternal_rest_clan_effect = yes
+			}
+			if = {
+				limit = { scope:join_ten_thousand_corpse_valley = yes }
+				join_ten_thousand_corpse_valley_effect = yes
+			}
+			if = {
+				limit = { scope:join_venomous_serpent_valley = yes }
+				join_venomous_serpent_valley_effect = yes
+			}
+			if = {
+				limit = { scope:join_blood_yin_cult = yes }
+				join_blood_yin_cult_effect = yes
+			}
+			if = {
+				limit = { scope:join_blood_moon_demonic_sect = yes }
+				join_blood_moon_demonic_sect_effect = yes
+			}
+			if = {
+				limit = { scope:join_succubus_palace = yes }
+				join_succubus_palace_effect = yes
+			}
+			if = {
+				limit = { scope:join_lone_wolf_wanderers = yes }
+				join_lone_wolf_wanderers_effect = yes
+			}
+			if = {
+				limit = { scope:join_vagrant_blade_brotherhood = yes }
+				join_vagrant_blade_brotherhood_effect = yes
+			}
+			if = {
+				limit = { scope:join_thousand_treasures_pavilion = yes }
+				join_thousand_treasures_pavilion_effect = yes
+			}
+			if = {
+				limit = { scope:join_mystic_forge_hall = yes }
+				join_mystic_forge_hall_effect = yes
+			}
+			if = {
+				limit = { scope:join_ancient_relic_sect = yes }
+				join_ancient_relic_sect_effect = yes
+			}
+			if = {
+				limit = { scope:join_primal_beast_sect = yes }
+				join_primal_beast_sect_effect = yes
+			}
+			if = {
+				limit = { scope:join_primordial_chaos_hall = yes }
+				join_primordial_chaos_hall_effect = yes
+			}
+			if = {
+				limit = { scope:join_feral_bond_sect = yes }
+				join_feral_bond_sect_effect = yes
+			}
+		}
+	}
+}
+
+join_mount_hua_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_mount_hua_decision_desc
+	selection_tooltip = join_mount_hua_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = mount_hua_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = mount_hua_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_mount_hua_effect = yes
+	}
+}
+
+join_heavenly_sword_pavilion_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_heavenly_sword_pavilion_decision_desc
+	selection_tooltip = join_heavenly_sword_pavilion_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = heavenly_sword_pavilion_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = heavenly_sword_pavilion_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_heavenly_sword_pavilion_effect = yes
+	}
+}
+
+join_ten_thousand_swords_valley_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_ten_thousand_swords_valley_decision_desc
+	selection_tooltip = join_ten_thousand_swords_valley_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = ten_thousand_swords_valley_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = ten_thousand_swords_valley_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_ten_thousand_swords_valley_effect = yes
+	}
+}
+
+join_violet_thunder_blade_sect_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_violet_thunder_blade_sect_decision_desc
+	selection_tooltip = join_violet_thunder_blade_sect_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = violet_thunder_blade_sect_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = violet_thunder_blade_sect_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_violet_thunder_blade_sect_effect = yes
+	}
+}
+
+join_nine_star_formation_sect_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_nine_star_formation_sect_decision_desc
+	selection_tooltip = join_nine_star_formation_sect_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = nine_star_formation_sect_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = nine_star_formation_sect_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_nine_star_formation_sect_effect = yes
+	}
+}
+
+join_mystic_seal_pavilion_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_mystic_seal_pavilion_decision_desc
+	selection_tooltip = join_mystic_seal_pavilion_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = mystic_seal_pavilion_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = mystic_seal_pavilion_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_mystic_seal_pavilion_effect = yes
+	}
+}
+
+join_wudang_sect_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_wudang_sect_decision_desc
+	selection_tooltip = join_wudang_sect_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = wudang_sect_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = wudang_sect_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_wudang_sect_effect = yes
+	}
+}
+
+join_shaolin_temple_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_shaolin_temple_decision_desc
+	selection_tooltip = join_shaolin_temple_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = shaolin_temple_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = shaolin_temple_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_shaolin_temple_effect = yes
+	}
+}
+
+join_eternal_harmony_pavilion_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_eternal_harmony_pavilion_decision_desc
+	selection_tooltip = join_eternal_harmony_pavilion_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = eternal_harmony_pavilion_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = eternal_harmony_pavilion_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_eternal_harmony_pavilion_effect = yes
+	}
+}
+
+join_divine_beast_mountain_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_divine_beast_mountain_decision_desc
+	selection_tooltip = join_divine_beast_mountain_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = divine_beast_mountain_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = divine_beast_mountain_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_divine_beast_mountain_effect = yes
+	}
+}
+
+join_thousand_beast_valley_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_thousand_beast_valley_decision_desc
+	selection_tooltip = join_thousand_beast_valley_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = thousand_beast_valley_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = thousand_beast_valley_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_thousand_beast_valley_effect = yes
+	}
+}
+
+join_crimson_moon_blade_hall_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_crimson_moon_blade_hall_decision_desc
+	selection_tooltip = join_crimson_moon_blade_hall_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = crimson_moon_blade_hall_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = crimson_moon_blade_hall_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_crimson_moon_blade_hall_effect = yes
+	}
+}
+
+join_tyrant_saber_palace_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_tyrant_saber_palace_decision_desc
+	selection_tooltip = join_tyrant_saber_palace_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = tyrant_saber_palace_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = tyrant_saber_palace_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_tyrant_saber_palace_effect = yes
+	}
+}
+
+join_demon_suppressing_blade_clan_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_demon_suppressing_blade_clan_decision_desc
+	selection_tooltip = join_demon_suppressing_blade_clan_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = demon_suppressing_blade_clan_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = demon_suppressing_blade_clan_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_demon_suppressing_blade_clan_effect = yes
+	}
+}
+
+join_medicine_king_valley_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_medicine_king_valley_decision_desc
+	selection_tooltip = join_medicine_king_valley_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = medicine_king_valley_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = medicine_king_valley_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_medicine_king_valley_effect = yes
+	}
+}
+
+join_hundred_herbs_pavilion_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_hundred_herbs_pavilion_decision_desc
+	selection_tooltip = join_hundred_herbs_pavilion_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = hundred_herbs_pavilion_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = hundred_herbs_pavilion_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_hundred_herbs_pavilion_effect = yes
+	}
+}
+
+join_jade_chamber_sect_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_jade_chamber_sect_decision_desc
+	selection_tooltip = join_jade_chamber_sect_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = jade_chamber_sect_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = jade_chamber_sect_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_jade_chamber_sect_effect = yes
+	}
+}
+
+join_moonless_night_pavilion_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_moonless_night_pavilion_decision_desc
+	selection_tooltip = join_moonless_night_pavilion_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = moonless_night_pavilion_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = moonless_night_pavilion_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_moonless_night_pavilion_effect = yes
+	}
+}
+
+join_pale_bone_hall_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_pale_bone_hall_decision_desc
+	selection_tooltip = join_pale_bone_hall_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = pale_bone_hall_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = pale_bone_hall_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_pale_bone_hall_effect = yes
+	}
+}
+
+join_eternal_rest_clan_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_eternal_rest_clan_decision_desc
+	selection_tooltip = join_eternal_rest_clan_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = eternal_rest_clan_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = eternal_rest_clan_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_eternal_rest_clan_effect = yes
+	}
+}
+
+join_ten_thousand_corpse_valley_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_ten_thousand_corpse_valley_decision_desc
+	selection_tooltip = join_ten_thousand_corpse_valley_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = ten_thousand_corpse_valley_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = ten_thousand_corpse_valley_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_ten_thousand_corpse_valley_effect = yes
+	}
+}
+
+join_venomous_serpent_valley_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_venomous_serpent_valley_decision_desc
+	selection_tooltip = join_venomous_serpent_valley_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = venomous_serpent_valley_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = venomous_serpent_valley_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_venomous_serpent_valley_effect = yes
+	}
+}
+
+join_blood_yin_cult_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_blood_yin_cult_decision_desc
+	selection_tooltip = join_blood_yin_cult_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = blood_yin_cult_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = blood_yin_cult_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_blood_yin_cult_effect = yes
+	}
+}
+
+join_blood_moon_demonic_sect_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_blood_moon_demonic_sect_decision_desc
+	selection_tooltip = join_blood_moon_demonic_sect_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = blood_moon_demonic_sect_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = blood_moon_demonic_sect_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_blood_moon_demonic_sect_effect = yes
+	}
+}
+
+join_succubus_palace_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_succubus_palace_decision_desc
+	selection_tooltip = join_succubus_palace_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = succubus_palace_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = succubus_palace_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_succubus_palace_effect = yes
+	}
+}
+
+join_lone_wolf_wanderers_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_lone_wolf_wanderers_decision_desc
+	selection_tooltip = join_lone_wolf_wanderers_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = lone_wolf_wanderers_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = lone_wolf_wanderers_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_lone_wolf_wanderers_effect = yes
+	}
+}
+
+join_vagrant_blade_brotherhood_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_vagrant_blade_brotherhood_decision_desc
+	selection_tooltip = join_vagrant_blade_brotherhood_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = vagrant_blade_brotherhood_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = vagrant_blade_brotherhood_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_vagrant_blade_brotherhood_effect = yes
+	}
+}
+
+join_thousand_treasures_pavilion_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_thousand_treasures_pavilion_decision_desc
+	selection_tooltip = join_thousand_treasures_pavilion_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = thousand_treasures_pavilion_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = thousand_treasures_pavilion_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_thousand_treasures_pavilion_effect = yes
+	}
+}
+
+join_mystic_forge_hall_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_mystic_forge_hall_decision_desc
+	selection_tooltip = join_mystic_forge_hall_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = mystic_forge_hall_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = mystic_forge_hall_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_mystic_forge_hall_effect = yes
+	}
+}
+
+join_ancient_relic_sect_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_ancient_relic_sect_decision_desc
+	selection_tooltip = join_ancient_relic_sect_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = ancient_relic_sect_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = ancient_relic_sect_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_ancient_relic_sect_effect = yes
+	}
+}
+
+join_primal_beast_sect_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_primal_beast_sect_decision_desc
+	selection_tooltip = join_primal_beast_sect_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = primal_beast_sect_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = primal_beast_sect_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_primal_beast_sect_effect = yes
+	}
+}
+
+join_primordial_chaos_hall_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_primordial_chaos_hall_decision_desc
+	selection_tooltip = join_primordial_chaos_hall_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = primordial_chaos_hall_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = primordial_chaos_hall_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_primordial_chaos_hall_effect = yes
+	}
+}
+
+join_feral_bond_sect_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
+	}
+	decision_group_type = major
+	sort_order = 541
+	desc = join_feral_bond_sect_decision_desc
+	selection_tooltip = join_feral_bond_sect_decision_tooltip
+	confirm_text = join_sect_confirm
+	cooldown = { years = 15 }
+	ai_goal = yes
+	ai_check_interval = 60
+	is_shown = {
+		is_ai = yes
+		is_adult = yes
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = feral_bond_sect_disciple
+		}
+	}
+	is_valid = {
+		has_trait = active_meridians
+		OR = {
+			NOT = { has_character_flag = sect_switch_cooldown }
+			has_character_flag = feral_bond_sect_disciple
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = chance_to_cultivate
+			is_adult = yes
+		}
+	}
+	effect = {
+		join_feral_bond_sect_effect = yes
+	}
+}

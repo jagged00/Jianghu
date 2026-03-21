@@ -1,4 +1,4 @@
-﻿@cultural_maa_extra_ai_score_1 = -30 # value = minus 3 regiments
+@cultural_maa_extra_ai_score_1 = -30 # value = minus 3 regiments
 @cultural_maa_extra_ai_score_2 = 10
 @cultural_maa_extra_ai_score_3 = 40
 @cultural_maa_extra_ai_score_4 = 10

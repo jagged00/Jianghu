@@ -1,6 +1,6 @@
 ﻿cultivation_orthodox_focus = {
 	lifestyle = cultivation_lifestyle
-	is_valid = { has_trait = cultivation_realm }
+	is_valid = { OR = { is_cultivator = yes has_character_flag = cultivation_initiated has_character_flag = joined_any_cultivation_sect } }
 	desc = {
 		desc = cultivation_orthodox_focus_desc
 		desc = line_break
@@ -14,7 +14,7 @@
 
 cultivation_unorthodox_focus = {
 	lifestyle = cultivation_lifestyle
-	is_valid = { has_trait = cultivation_realm }
+	is_valid = { OR = { is_cultivator = yes has_character_flag = cultivation_initiated has_character_flag = joined_any_cultivation_sect } }
 	desc = {
 		desc = cultivation_unorthodox_focus_desc
 		desc = line_break
@@ -28,7 +28,7 @@ cultivation_unorthodox_focus = {
 
 cultivation_demonic_focus = {
 	lifestyle = cultivation_lifestyle
-	is_valid = { has_trait = cultivation_realm }
+	is_valid = { OR = { is_cultivator = yes has_character_flag = cultivation_initiated has_character_flag = joined_any_cultivation_sect } }
 	desc = {
 		desc = cultivation_demonic_focus_desc
 		desc = line_break
@@ -42,7 +42,7 @@ cultivation_demonic_focus = {
 
 cultivation_vagrant_focus = {
 	lifestyle = cultivation_lifestyle
-	is_valid = { has_trait = cultivation_realm }
+	is_valid = { OR = { is_cultivator = yes has_character_flag = cultivation_initiated has_character_flag = joined_any_cultivation_sect } }
 	desc = {
 		desc = cultivation_vagrant_focus_desc
 		desc = line_break

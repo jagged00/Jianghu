@@ -9,7 +9,7 @@
             # 1. Realm Cultivators – XP + Breakthrough + Disease Cleanse
             # ————————————————
             if = {
-                limit = { has_trait = cultivation_realm }
+                limit = { is_cultivator = yes }
                 mymod_cultivation_gain_xp_effect
                 mymod_remove_all_diseases_effect
             }

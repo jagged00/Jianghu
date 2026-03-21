@@ -12,14 +12,14 @@
 	is_shown = {
 		is_ai = no
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = joined_any_cultivation_sect
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = joined_any_cultivation_sect
@@ -382,14 +382,14 @@ join_mount_hua_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = mount_hua_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = mount_hua_disciple
@@ -422,14 +422,14 @@ join_heavenly_sword_pavilion_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = heavenly_sword_pavilion_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = heavenly_sword_pavilion_disciple
@@ -462,14 +462,14 @@ join_ten_thousand_swords_valley_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = ten_thousand_swords_valley_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = ten_thousand_swords_valley_disciple
@@ -502,14 +502,14 @@ join_violet_thunder_blade_sect_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = violet_thunder_blade_sect_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = violet_thunder_blade_sect_disciple
@@ -542,14 +542,14 @@ join_nine_star_formation_sect_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = nine_star_formation_sect_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = nine_star_formation_sect_disciple
@@ -582,14 +582,14 @@ join_mystic_seal_pavilion_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = mystic_seal_pavilion_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = mystic_seal_pavilion_disciple
@@ -622,14 +622,14 @@ join_wudang_sect_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = wudang_sect_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = wudang_sect_disciple
@@ -662,14 +662,14 @@ join_shaolin_temple_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = shaolin_temple_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = shaolin_temple_disciple
@@ -702,14 +702,14 @@ join_eternal_harmony_pavilion_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = eternal_harmony_pavilion_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = eternal_harmony_pavilion_disciple
@@ -742,14 +742,14 @@ join_divine_beast_mountain_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = divine_beast_mountain_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = divine_beast_mountain_disciple
@@ -782,14 +782,14 @@ join_thousand_beast_valley_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = thousand_beast_valley_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = thousand_beast_valley_disciple
@@ -822,14 +822,14 @@ join_crimson_moon_blade_hall_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = crimson_moon_blade_hall_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = crimson_moon_blade_hall_disciple
@@ -862,14 +862,14 @@ join_tyrant_saber_palace_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = tyrant_saber_palace_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = tyrant_saber_palace_disciple
@@ -902,14 +902,14 @@ join_demon_suppressing_blade_clan_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = demon_suppressing_blade_clan_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = demon_suppressing_blade_clan_disciple
@@ -942,14 +942,14 @@ join_medicine_king_valley_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = medicine_king_valley_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = medicine_king_valley_disciple
@@ -982,14 +982,14 @@ join_hundred_herbs_pavilion_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = hundred_herbs_pavilion_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = hundred_herbs_pavilion_disciple
@@ -1022,14 +1022,14 @@ join_jade_chamber_sect_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = jade_chamber_sect_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = jade_chamber_sect_disciple
@@ -1062,14 +1062,14 @@ join_moonless_night_pavilion_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = moonless_night_pavilion_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = moonless_night_pavilion_disciple
@@ -1102,14 +1102,14 @@ join_pale_bone_hall_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = pale_bone_hall_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = pale_bone_hall_disciple
@@ -1142,14 +1142,14 @@ join_eternal_rest_clan_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = eternal_rest_clan_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = eternal_rest_clan_disciple
@@ -1182,14 +1182,14 @@ join_ten_thousand_corpse_valley_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = ten_thousand_corpse_valley_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = ten_thousand_corpse_valley_disciple
@@ -1222,14 +1222,14 @@ join_venomous_serpent_valley_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = venomous_serpent_valley_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = venomous_serpent_valley_disciple
@@ -1262,14 +1262,14 @@ join_blood_yin_cult_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = blood_yin_cult_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = blood_yin_cult_disciple
@@ -1302,14 +1302,14 @@ join_blood_moon_demonic_sect_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = blood_moon_demonic_sect_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = blood_moon_demonic_sect_disciple
@@ -1342,14 +1342,14 @@ join_succubus_palace_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = succubus_palace_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = succubus_palace_disciple
@@ -1382,14 +1382,14 @@ join_lone_wolf_wanderers_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = lone_wolf_wanderers_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = lone_wolf_wanderers_disciple
@@ -1422,14 +1422,14 @@ join_vagrant_blade_brotherhood_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = vagrant_blade_brotherhood_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = vagrant_blade_brotherhood_disciple
@@ -1462,14 +1462,14 @@ join_thousand_treasures_pavilion_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = thousand_treasures_pavilion_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = thousand_treasures_pavilion_disciple
@@ -1502,14 +1502,14 @@ join_mystic_forge_hall_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = mystic_forge_hall_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = mystic_forge_hall_disciple
@@ -1542,14 +1542,14 @@ join_ancient_relic_sect_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = ancient_relic_sect_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = ancient_relic_sect_disciple
@@ -1582,14 +1582,14 @@ join_primal_beast_sect_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = primal_beast_sect_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = primal_beast_sect_disciple
@@ -1622,14 +1622,14 @@ join_primordial_chaos_hall_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = primordial_chaos_hall_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = primordial_chaos_hall_disciple
@@ -1662,14 +1662,14 @@ join_feral_bond_sect_decision = {
 	is_shown = {
 		is_ai = yes
 		is_adult = yes
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = feral_bond_sect_disciple
 		}
 	}
 	is_valid = {
-		has_trait = active_meridians
+		has_awakened_meridians = yes
 		OR = {
 			NOT = { has_character_flag = sect_switch_cooldown }
 			has_character_flag = feral_bond_sect_disciple

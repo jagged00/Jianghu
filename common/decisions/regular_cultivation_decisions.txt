@@ -12,7 +12,7 @@ focus_on_cultivation = {
 	sort_order = 500
 
     is_shown = {
-		has_trait = cultivation_realm
+		is_cultivator = yes
     }
 
     ai_check_interval = 3

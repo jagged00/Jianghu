@@ -19,23 +19,25 @@
 	}
 
 	#Meridian checks
-	switch = {
-		trigger = has_trait 
-		poor_meridians = {
-			value = 0.1
-		}
-		normal_meridians = {
-			value = 1
-		}
-		good_meridians = {
-			value = 2.7
-		}
-		excellent_meridians = {
-			value = 4
-		}
-		heavenly_meridians = {
-			value = 50
-		}
+	if = {
+		limit = { has_trait = poor_meridians }
+		add = 0.1
+	}
+	else_if = {
+		limit = { has_trait = normal_meridians }
+		add = 1
+	}
+	else_if = {
+		limit = { has_trait = good_meridians }
+		add = 2.7
+	}
+	else_if = {
+		limit = { has_trait = excellent_meridians }
+		add = 4
+	}
+	else_if = {
+		limit = { has_trait = heavenly_meridians }
+		add = 50
 	}
 
 	#personality checks
@@ -110,30 +112,33 @@ breakthrough_difficulty_modifier = {
 
 cultivation_xp_for_yearly_progress = {
 	value = 0
-	switch = {
-		trigger = has_trait
-		qi_gathering = { 
-			value = 3
-		}
-		foundation_establishment = {
-			value = 3
-		}
-		core_formation = {
-			value = 2
-		}
-		nascent_soul = {
-			value = 2
-		}
-		spirit_severing = {
-			value = 1
-		}
-		dao_seeking = {
-			value = 1
-		}
-		immortal_ascension = {
-			value = 1
-		}
-		
+	if = {
+		limit = { has_trait = qi_gathering }
+		add = 3
+	}
+	else_if = {
+		limit = { has_trait = foundation_establishment }
+		add = 3
+	}
+	else_if = {
+		limit = { has_trait = core_formation }
+		add = 2
+	}
+	else_if = {
+		limit = { has_trait = nascent_soul }
+		add = 2
+	}
+	else_if = {
+		limit = { has_trait = spirit_severing }
+		add = 1
+	}
+	else_if = {
+		limit = { has_trait = dao_seeking }
+		add = 1
+	}
+	else_if = {
+		limit = { has_trait = immortal_ascension }
+		add = 1
 	}
 
 	multiply = cultivation_progress_multiplier

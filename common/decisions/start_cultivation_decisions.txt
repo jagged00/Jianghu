@@ -17,7 +17,7 @@ open_meridians_decision = {
 
     is_shown = {
         NOT = {
-			has_trait = active_meridians
+			has_awakened_meridians = yes
 		}
 		prowess >= 10
     }
@@ -82,11 +82,11 @@ begin_cultivation_decision = {
     is_shown = {
 		AND = {
 			is_adult = yes
-			has_trait = active_meridians
+			has_awakened_meridians = yes
 			has_character_flag = joined_any_cultivation_sect
 			NOT = { has_character_flag = cultivation_initiated }
 			NOT = {
-				has_trait = cultivation_realm
+				is_cultivator = yes
 			}
 
 		}

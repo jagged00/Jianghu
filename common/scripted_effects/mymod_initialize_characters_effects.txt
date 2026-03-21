@@ -1,6 +1,6 @@
 ﻿mymod_initialize_meridians_effect = {
     if = {
-        limit = { NOT = { has_trait = active_meridians } }
+        limit = { NOT = { has_awakened_meridians = yes } }
         random_list = {
             100 = { add_trait = poor_meridians }
             70  = { add_trait = normal_meridians }
@@ -16,7 +16,7 @@ mymod_initialize_cultivation_effect = {
         limit = {
             has_character_flag = joined_any_cultivation_sect
             has_character_flag = cultivation_initiated
-            NOT = { has_trait = cultivation_realm }
+            NOT = { is_cultivator = yes }
         }
         # Initiates now advance through the mortal/immortal path perk tree.
     }

@@ -5,7 +5,7 @@
 	can_be_picked = {
 		has_character_flag = joined_any_cultivation_sect
 		has_character_flag = cultivation_initiated
-		NOT = { has_trait = cultivation_realm }
+		NOT = { is_cultivator = yes }
 	}
 	icon = node_cultivation
 	auto_selection_weight = { value = 1000 }
@@ -19,7 +19,7 @@ mortal_internal_strengthening_perk = {
 	can_be_picked = {
 		has_character_flag = joined_any_cultivation_sect
 		has_character_flag = cultivation_initiated
-		NOT = { has_trait = cultivation_realm }
+		NOT = { is_cultivator = yes }
 	}
 	icon = node_cultivation
 	auto_selection_weight = { value = 1000 }
@@ -33,7 +33,7 @@ mortal_bone_tempering_perk = {
 	can_be_picked = {
 		has_character_flag = joined_any_cultivation_sect
 		has_character_flag = cultivation_initiated
-		NOT = { has_trait = cultivation_realm }
+		NOT = { is_cultivator = yes }
 	}
 	icon = node_cultivation
 	parent = mortal_external_strengthening_perk
@@ -47,7 +47,7 @@ mortal_viscera_tempering_perk = {
 	can_be_picked = {
 		has_character_flag = joined_any_cultivation_sect
 		has_character_flag = cultivation_initiated
-		NOT = { has_trait = cultivation_realm }
+		NOT = { is_cultivator = yes }
 	}
 	icon = node_cultivation
 	parent = mortal_internal_strengthening_perk
@@ -61,7 +61,7 @@ mortal_meridian_cleansing_perk = {
 	can_be_picked = {
 		has_character_flag = joined_any_cultivation_sect
 		has_character_flag = cultivation_initiated
-		NOT = { has_trait = cultivation_realm }
+		NOT = { is_cultivator = yes }
 	}
 	icon = node_cultivation
 	parent = mortal_bone_tempering_perk
@@ -76,7 +76,7 @@ mortal_qi_gathering_breakthrough_perk = {
 	can_be_picked = {
 		has_character_flag = joined_any_cultivation_sect
 		has_character_flag = cultivation_initiated
-		NOT = { has_trait = cultivation_realm }
+		NOT = { is_cultivator = yes }
 	}
 	icon = node_cultivation
 	parent = mortal_meridian_cleansing_perk

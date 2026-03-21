@@ -6,7 +6,7 @@ xianxia_cult.1000 = {
 
     trigger = {
         is_alive = yes
-        has_trait = cultivation_realm
+        is_cultivator = yes
         NOT = { has_character_flag = recent_breakthrough }
     }
 

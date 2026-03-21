@@ -80,8 +80,7 @@ demon_suppressing_blade_clan_training = {
 	advantage = 5
 }
 medicine_king_blessing = {
-	health = 0.5
-	disease_resistance = 20
+	health = 0.75
 }
 hundred_herbs_pavilion_training = {
 	learning = 2

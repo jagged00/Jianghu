@@ -1,9 +1,10 @@
 ﻿cultivation_lifestyle = {
 	is_highlighted = {
 		OR = {
-			has_trait = cultivation_realm
+			is_cultivator = yes
 			has_character_flag = cultivation_initiated
 			has_character_flag = joined_any_cultivation_sect
+			has_awakened_meridians = yes
 		}
 	}
 	xp_per_level = 1000

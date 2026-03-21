@@ -12,10 +12,7 @@ focus_on_cultivation = {
 	sort_order = 500
 
     is_shown = {
-		AND = {
-			has_trait = cultivation_realm
-			breakthrough_threshold = no
-		}
+		is_cultivator = yes
     }
 
     ai_check_interval = 3

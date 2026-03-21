@@ -1,4 +1,4 @@
-﻿on_yearly_character_pulse = {
+on_yearly_character_pulse = {
     events = {
         xianxia_qi.0001        # your hidden Qi grant (use whichever ID you prefer)
     }

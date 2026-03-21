@@ -1,4 +1,4 @@
-﻿namespace = xianxia_qi
+namespace = xianxia_qi
 
 xianxia_qi.0001 = {
 	hidden = yes

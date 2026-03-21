@@ -1,4 +1,4 @@
-﻿# active Roots
+# active Roots
 
 open_meridians_decision = {
 

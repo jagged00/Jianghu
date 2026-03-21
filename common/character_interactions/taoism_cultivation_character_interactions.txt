@@ -1,4 +1,4 @@
-﻿#############################
+#############################
 # TEACH CULTIVATION – FINAL AI VERSION (CLOSE FAMILY FIRST + NO ERRORS)
 #############################
 teach_cultivation_interaction = {

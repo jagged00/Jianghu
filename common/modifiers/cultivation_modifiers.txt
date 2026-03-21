@@ -1,4 +1,4 @@
-﻿unlocking_cultivation_modifier = {
+unlocking_cultivation_modifier = {
 	icon = yin_yang_modifier
 	diplomacy = -3
 	martial = -3

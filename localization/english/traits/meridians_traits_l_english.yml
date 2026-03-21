@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  trait_poor_meridians:0 "Poor meridians"
  trait_poor_meridians_desc:0 "Poor meridians, only allow for very basic cultivation. Can be upgraded with special events"
  trait_poor_meridians_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has poor meridians, not allowing for good cultivation" 

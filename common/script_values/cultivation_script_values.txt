@@ -1,4 +1,4 @@
-﻿cultivation_progress_multiplier = {
+cultivation_progress_multiplier = {
 
 	#Lifestyle focus checks
 	if = {

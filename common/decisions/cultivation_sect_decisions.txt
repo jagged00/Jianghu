@@ -1,4 +1,4 @@
-﻿﻿select_cultivation_sect_decision = {
+select_cultivation_sect_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_start_cultivation.dds"
 	}

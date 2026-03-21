@@ -1,4 +1,4 @@
-﻿namespace = cultivation_important_event
+namespace = cultivation_important_event
 
 #Starting Events
 

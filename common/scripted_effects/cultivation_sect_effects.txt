@@ -1,0 +1,398 @@
+﻿﻿clear_cultivation_sect_membership_effect = {
+	remove_character_flag = mount_hua_disciple
+	remove_character_flag = heavenly_sword_pavilion_disciple
+	remove_character_flag = ten_thousand_swords_valley_disciple
+	remove_character_flag = violet_thunder_blade_sect_disciple
+	remove_character_flag = nine_star_formation_sect_disciple
+	remove_character_flag = mystic_seal_pavilion_disciple
+	remove_character_flag = wudang_sect_disciple
+	remove_character_flag = shaolin_temple_disciple
+	remove_character_flag = eternal_harmony_pavilion_disciple
+	remove_character_flag = divine_beast_mountain_disciple
+	remove_character_flag = thousand_beast_valley_disciple
+	remove_character_flag = crimson_moon_blade_hall_disciple
+	remove_character_flag = tyrant_saber_palace_disciple
+	remove_character_flag = demon_suppressing_blade_clan_disciple
+	remove_character_flag = medicine_king_valley_disciple
+	remove_character_flag = hundred_herbs_pavilion_disciple
+	remove_character_flag = jade_chamber_sect_disciple
+	remove_character_flag = moonless_night_pavilion_disciple
+	remove_character_flag = pale_bone_hall_disciple
+	remove_character_flag = eternal_rest_clan_disciple
+	remove_character_flag = ten_thousand_corpse_valley_disciple
+	remove_character_flag = venomous_serpent_valley_disciple
+	remove_character_flag = blood_yin_cult_disciple
+	remove_character_flag = blood_moon_demonic_sect_disciple
+	remove_character_flag = succubus_palace_disciple
+	remove_character_flag = lone_wolf_wanderers_disciple
+	remove_character_flag = vagrant_blade_brotherhood_disciple
+	remove_character_flag = thousand_treasures_pavilion_disciple
+	remove_character_flag = mystic_forge_hall_disciple
+	remove_character_flag = ancient_relic_sect_disciple
+	remove_character_flag = primal_beast_sect_disciple
+	remove_character_flag = primordial_chaos_hall_disciple
+	remove_character_flag = feral_bond_sect_disciple
+}
+
+join_mount_hua_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = mount_hua_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = mount_hua_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = mount_hua_training months = 36 }
+}
+
+join_heavenly_sword_pavilion_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = heavenly_sword_pavilion_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = heavenly_sword_pavilion_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = heavenly_sword_pavilion_training months = 36 }
+}
+
+join_ten_thousand_swords_valley_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = ten_thousand_swords_valley_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = ten_thousand_swords_valley_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = ten_thousand_swords_valley_training months = 36 }
+}
+
+join_violet_thunder_blade_sect_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = violet_thunder_blade_sect_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = violet_thunder_blade_sect_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = violet_thunder_blade_sect_training months = 36 }
+}
+
+join_nine_star_formation_sect_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = nine_star_formation_sect_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = nine_star_formation_sect_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = nine_star_formation_sect_training months = 36 }
+}
+
+join_mystic_seal_pavilion_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = mystic_seal_pavilion_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = mystic_seal_pavilion_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = mystic_seal_pavilion_training months = 36 }
+}
+
+join_wudang_sect_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = wudang_sect_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = wudang_sect_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = wudang_clarity months = 36 }
+}
+
+join_shaolin_temple_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = shaolin_temple_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = shaolin_temple_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = shaolin_temple_training months = 36 }
+}
+
+join_eternal_harmony_pavilion_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = eternal_harmony_pavilion_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = eternal_harmony_pavilion_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = eternal_harmony_pavilion_training months = 36 }
+}
+
+join_divine_beast_mountain_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = divine_beast_mountain_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = divine_beast_mountain_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = divine_beast_mountain_training months = 36 }
+}
+
+join_thousand_beast_valley_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = thousand_beast_valley_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = thousand_beast_valley_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = thousand_beast_valley_training months = 36 }
+}
+
+join_crimson_moon_blade_hall_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = crimson_moon_blade_hall_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = crimson_moon_blade_hall_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = crimson_moon_blade_hall_training months = 36 }
+}
+
+join_tyrant_saber_palace_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = tyrant_saber_palace_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = tyrant_saber_palace_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = tyrant_saber_palace_training months = 36 }
+}
+
+join_demon_suppressing_blade_clan_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = demon_suppressing_blade_clan_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = demon_suppressing_blade_clan_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = demon_suppressing_blade_clan_training months = 36 }
+}
+
+join_medicine_king_valley_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = medicine_king_valley_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = medicine_king_valley_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = medicine_king_blessing months = 36 }
+}
+
+join_hundred_herbs_pavilion_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = hundred_herbs_pavilion_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = hundred_herbs_pavilion_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = hundred_herbs_pavilion_training months = 36 }
+}
+
+join_jade_chamber_sect_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = jade_chamber_sect_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = jade_chamber_sect_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = jade_chamber_sect_training months = 36 }
+}
+
+join_moonless_night_pavilion_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = moonless_night_pavilion_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = moonless_night_pavilion_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = moonless_night_pavilion_training months = 36 }
+}
+
+join_pale_bone_hall_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = pale_bone_hall_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = pale_bone_hall_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = pale_bone_hall_training months = 36 }
+}
+
+join_eternal_rest_clan_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = eternal_rest_clan_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = eternal_rest_clan_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = eternal_rest_clan_training months = 36 }
+}
+
+join_ten_thousand_corpse_valley_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = ten_thousand_corpse_valley_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = ten_thousand_corpse_valley_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = corpse_valley_tempering months = 36 }
+}
+
+join_venomous_serpent_valley_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = venomous_serpent_valley_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = venomous_serpent_valley_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = venomous_serpent_valley_training months = 36 }
+}
+
+join_blood_yin_cult_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = blood_yin_cult_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = blood_yin_cult_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = blood_yin_cult_training months = 36 }
+}
+
+join_blood_moon_demonic_sect_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = blood_moon_demonic_sect_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = blood_moon_demonic_sect_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = blood_moon_demonic_sect_training months = 36 }
+}
+
+join_succubus_palace_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = succubus_palace_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = succubus_palace_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = succubus_palace_training months = 36 }
+}
+
+join_lone_wolf_wanderers_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = lone_wolf_wanderers_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = lone_wolf_wanderers_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = lone_wolf_wanderers_training months = 36 }
+}
+
+join_vagrant_blade_brotherhood_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = vagrant_blade_brotherhood_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = vagrant_blade_brotherhood_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = vagrant_blade_brotherhood_training months = 36 }
+}
+
+join_thousand_treasures_pavilion_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = thousand_treasures_pavilion_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = thousand_treasures_pavilion_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = thousand_treasures_pavilion_training months = 36 }
+}
+
+join_mystic_forge_hall_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = mystic_forge_hall_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = mystic_forge_hall_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = mystic_forge_hall_training months = 36 }
+}
+
+join_ancient_relic_sect_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = ancient_relic_sect_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = ancient_relic_sect_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = ancient_relic_sect_training months = 36 }
+}
+
+join_primal_beast_sect_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = primal_beast_sect_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = primal_beast_sect_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = primal_beast_sect_training months = 36 }
+}
+
+join_primordial_chaos_hall_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = primordial_chaos_hall_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = primordial_chaos_hall_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = primordial_chaos_hall_training months = 36 }
+}
+
+join_feral_bond_sect_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = feral_bond_sect_disciple } }
+		clear_cultivation_sect_membership_effect = yes
+		add_character_flag = joined_any_cultivation_sect
+		add_character_flag = feral_bond_sect_disciple
+		add_character_flag = { flag = sect_switch_cooldown years = 15 }
+	}
+	add_character_modifier = { modifier = feral_bond_sect_training months = 36 }
+}

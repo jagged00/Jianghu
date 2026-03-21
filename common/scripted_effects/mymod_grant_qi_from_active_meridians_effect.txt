@@ -1,4 +1,4 @@
-﻿mymod_grant_qi_from_active_meridians_effect = {
+mymod_grant_qi_from_active_meridians_effect = {
     this = {   # ← THIS LINE IS THE FIX
         if = {
             limit = {

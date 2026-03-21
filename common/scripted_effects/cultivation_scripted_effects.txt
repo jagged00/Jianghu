@@ -3,7 +3,7 @@
 #CURRENTLY NOT IN USE
 start_cultivating_event_effect = {
     add_trait = qi_gathering
-	
+
    ##TODO: remember to check the origianl code since it used something about immortal age
 }
 
@@ -27,7 +27,7 @@ breakthrough_effect = {
 }
 
 earn_cultivation_xp = {
-    
+
     switch = {
         trigger = has_trait
         qi_gathering = {
@@ -35,7 +35,7 @@ earn_cultivation_xp = {
                 trait = qi_gathering
                 value = cultivation_xp_for_yearly_progress
             }
-            
+
         }
         foundation_establishment = {
             add_trait_xp = {
@@ -104,7 +104,7 @@ wound_cultivation_character = {
         }
         add_trait = wounded_1
     }else = {
-        
+
         switch = {
             trigger = has_trait
             wounded_1 = {

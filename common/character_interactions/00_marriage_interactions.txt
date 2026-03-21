@@ -751,9 +751,24 @@ arrange_marriage_interaction = {
 
 	ai_accept = {
 		base = 0
-		
-                xianxia_marriage_preference_effect = yes
-		
+
+                if = {
+                    limit = { has_trait = heavenly_meridians }
+                    add = 200
+                }
+                else_if = {
+                    limit = { has_trait = excellent_meridians }
+                    add = 150
+                }
+                else_if = {
+                    limit = { has_trait = good_meridians }
+                    add = 100
+                }
+                else_if = {
+                    limit = { has_trait = normal_meridians }
+                    add = 30
+                }
+
 		marriage_ai_accept_modifier = yes
 	}
 
@@ -1592,9 +1607,24 @@ marry_off_interaction = {
 
 	ai_accept = {
 		base = 0 # Should be 0 for all interactions
-		
-                xianxia_marriage_preference_effect = yes
-		
+
+                if = {
+                    limit = { has_trait = heavenly_meridians }
+                    add = 200
+                }
+                else_if = {
+                    limit = { has_trait = excellent_meridians }
+                    add = 150
+                }
+                else_if = {
+                    limit = { has_trait = good_meridians }
+                    add = 100
+                }
+                else_if = {
+                    limit = { has_trait = normal_meridians }
+                    add = 30
+                }
+
 		marriage_ai_accept_modifier = yes
 
 		# Unity modifiers
@@ -1901,26 +1931,26 @@ break_betrothal_interaction = {
 			scope:recipient = {
 				is_ai = yes
 				is_betrothed = yes
-			 	OR = {
-			 		AND = {
-			 			is_playable_character = no
-			 			liege = scope:actor
-			 		}
-			 		AND = {
-			 			is_child_of = scope:actor
-			 			NOT = {
-			 				matchmaker = {
-			 					is_parent_of = prev
-			 					this != scope:actor
-			 				}
-			 			}
-			 			OR = {
-			 				is_playable_character = no
-			 				target_is_liege_or_above = scope:actor
-			 			}
-			 		}
-			 	}
-			 	betrothed = { always = yes }
+				OR = {
+					AND = {
+						is_playable_character = no
+						liege = scope:actor
+					}
+					AND = {
+						is_child_of = scope:actor
+						NOT = {
+							matchmaker = {
+								is_parent_of = prev
+								this != scope:actor
+							}
+						}
+						OR = {
+							is_playable_character = no
+							target_is_liege_or_above = scope:actor
+						}
+					}
+				}
+				betrothed = { always = yes }
 			}
 
 			#Break recipient's betrothal with actor's vassal child/courtier
@@ -1932,12 +1962,12 @@ break_betrothal_interaction = {
 						AND = {
 							is_child_of = scope:actor
 							target_is_liege_or_above = scope:actor
-				 			NOT = {
-				 				matchmaker = {
-				 					is_parent_of = prev
-				 					this != scope:actor
-				 				}
-				 			}
+							NOT = {
+								matchmaker = {
+									is_parent_of = prev
+									this != scope:actor
+								}
+							}
 						}
 						AND = {
 							is_playable_character = no
@@ -1966,12 +1996,12 @@ break_betrothal_interaction = {
 								is_playable_character = no
 								target_is_liege_or_above = scope:recipient
 							}
-				 			NOT = {
-				 				matchmaker = {
-				 					is_parent_of = prev
-				 					this != scope:actor
-				 				}
-				 			}
+							NOT = {
+								matchmaker = {
+									is_parent_of = prev
+									this != scope:actor
+								}
+							}
 						}
 					}
 				}
@@ -2000,12 +2030,12 @@ break_betrothal_interaction = {
 								AND = {
 									is_child_of = scope:actor
 									target_is_liege_or_above = scope:actor
-						 			NOT = {
-						 				matchmaker = {
-						 					is_parent_of = prev
-						 					this != scope:actor
-						 				}
-						 			}
+									NOT = {
+										matchmaker = {
+											is_parent_of = prev
+											this != scope:actor
+										}
+									}
 								}
 								AND = {
 									is_playable_character = no
@@ -2036,12 +2066,12 @@ break_betrothal_interaction = {
 								AND = {
 									is_child_of = scope:actor
 									target_is_liege_or_above = scope:actor
-						 			NOT = {
-						 				matchmaker = {
-						 					is_parent_of = prev
-						 					this != scope:actor
-						 				}
-						 			}
+									NOT = {
+										matchmaker = {
+											is_parent_of = prev
+											this != scope:actor
+										}
+									}
 								}
 								AND = {
 									is_playable_character = no
@@ -2084,12 +2114,12 @@ break_betrothal_interaction = {
 									is_playable_character = no
 									target_is_liege_or_above = scope:recipient
 								}
-					 			NOT = {
-					 				matchmaker = {
-					 					is_parent_of = prev
-					 					this != scope:actor
-					 				}
-					 			}
+								NOT = {
+									matchmaker = {
+										is_parent_of = prev
+										this != scope:actor
+									}
+								}
 								exists = var:hook_used_for_betrothal
 								var:hook_used_for_betrothal = {
 									this = scope:actor
@@ -2821,13 +2851,13 @@ ai_make_concubine_interaction = {
 				is_young_character = yes
 			}
 		}
-		
+
              modifier = {
                      add = 100
-                     scope:recipient = { xianxia_marriage_preference_effect = yes }
+                     scope:recipient = { OR = { has_trait = heavenly_meridians has_trait = excellent_meridians has_trait = good_meridians has_trait = normal_meridians } }
 
 		}
-		
+
 		modifier = {
 			add = 100
 			scope:recipient = {

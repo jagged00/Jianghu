@@ -3,9 +3,10 @@
 #000-100 Decision related
 cultivation_regular_event.001 = { # focus on training decision/event
 	type = character_event
-	
+	hidden = yes
 
-	
+
+
     trigger = {
     }
 
@@ -13,9 +14,9 @@ cultivation_regular_event.001 = { # focus on training decision/event
 		root = {
 			earn_cultivation_xp = yes
 		}
-		
+
 	}
-	
+
 }
 
 
@@ -25,7 +26,7 @@ cultivation_regular_event.101 = { # Mysterious cultivator sells herb
 	title = cultivation_regular_event.101.t
 	desc = cultivation_regular_event.101.desc
 
-	theme = diplomacy 
+	theme = diplomacy
 	left_portrait = {
 		character = root
 		animation = thinking
@@ -62,7 +63,7 @@ cultivation_regular_event.101 = { # Mysterious cultivator sells herb
 				add = -20
 			}
 		}
-		
+
 		duel = {
 			skill = prowess
 			target = scope:cultivator
@@ -71,7 +72,7 @@ cultivation_regular_event.101 = { # Mysterious cultivator sells herb
 					value = scope:duel_value
 					multiplier = 10
 					min = -19
-			   	}
+				}
 				earn_cultivation_xp = yes
 			}
 			30 = {
@@ -79,13 +80,13 @@ cultivation_regular_event.101 = { # Mysterious cultivator sells herb
 					value = scope:duel_value
 					min = -29
 					max = 0
-			   	}
-				
+				}
+
 				wound_cultivation_character = yes
 				earn_cultivation_xp = yes
 			}
 			50 = {
-				
+
 				wound_cultivation_character = yes
 				add_prestige = -200
 			}
@@ -109,7 +110,7 @@ cultivation_regular_event.101 = { # Mysterious cultivator sells herb
 				add = -20
 			}
 		}
-		
+
 		duel = {
 			skill = prowess
 			target = scope:cultivator
@@ -118,7 +119,7 @@ cultivation_regular_event.101 = { # Mysterious cultivator sells herb
 					value = scope:duel_value
 					multiplier = 10
 					min = -19
-			   	}
+				}
 				create_breakthrough_artifact = {
 					OWNER = root
 				}
@@ -128,15 +129,15 @@ cultivation_regular_event.101 = { # Mysterious cultivator sells herb
 					value = scope:duel_value
 					min = -29
 					max = 0
-			   	}
-				
+				}
+
 				wound_cultivation_character = yes
 				create_breakthrough_artifact = {
 					OWNER = root
 				}
 			}
 			50 = {
-				
+
 				wound_cultivation_character = yes
 				add_prestige = -200
 			}
@@ -185,7 +186,7 @@ cultivation_regular_event.101 = { # Mysterious cultivator sells herb
 		remove_short_term_gold = 150
 	}
 
-	
+
 	option = { #Ignore it
         name = cultivation_regular_event.101.e
 		ai_chance = {
@@ -202,7 +203,7 @@ cultivation_regular_event.102 = { # Time dilation
 	title = cultivation_regular_event.102.t
 	desc = cultivation_regular_event.102.desc
 
-	theme = learning 
+	theme = learning
 	left_portrait = {
 		character = root
 		animation = thinking
@@ -220,7 +221,7 @@ cultivation_regular_event.102 = { # Time dilation
 				add = cultivation_attitude
 			}
 		}
-		
+
 		random_list = {
 			1 = {
 				death = {
@@ -249,7 +250,7 @@ cultivation_regular_event.102 = { # Time dilation
 				add = 10
 			}
 		}
-		
+
 		random_list = {
 			30 = {
 				death = {
@@ -262,7 +263,7 @@ cultivation_regular_event.102 = { # Time dilation
 			}
 		}
 	}
-	
+
 	option = { #Practice for 5 hours
 		name = cultivation_regular_event.102.c
 		ai_chance = {
@@ -279,7 +280,7 @@ cultivation_regular_event.102 = { # Time dilation
 				add = -10
 			}
 		}
-		
+
 		random_list = {
 			50 = {
 				death = {
@@ -293,8 +294,8 @@ cultivation_regular_event.102 = { # Time dilation
 			}
 		}
 	}
-	
-	
+
+
 	option = { #Ignore it
         name = cultivation_regular_event.102.d
 		ai_chance = {

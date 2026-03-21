@@ -1,4 +1,4 @@
-﻿namespace = cultivation_travel_events
+namespace = cultivation_travel_events
 
 #First 100 are for regular travelling
 

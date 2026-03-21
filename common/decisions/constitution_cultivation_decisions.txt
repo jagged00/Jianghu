@@ -1,4 +1,4 @@
-﻿improve_dragon_bloodline_part_1 = {
+improve_dragon_bloodline_part_1 = {
 
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/improve_dragon_bloodline_part_1.dds"

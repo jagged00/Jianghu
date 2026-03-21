@@ -1,4 +1,4 @@
-﻿
+
 travel_events_on_action = {
 	events = {
 

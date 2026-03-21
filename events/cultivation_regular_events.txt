@@ -1,4 +1,4 @@
-﻿namespace = cultivation_regular_event
+namespace = cultivation_regular_event
 
 #000-100 Decision related
 cultivation_regular_event.001 = { # focus on training decision/event

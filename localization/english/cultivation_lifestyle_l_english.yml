@@ -1,0 +1,26 @@
+l_english:
+  cultivation_lifestyle:0 "Cultivation"
+  cultivation_lifestyle_name:0 "Cultivation"
+  cultivation_lifestyle_desc:0 "Walk the road of qi, temper the flesh, and polish the soul until your name echoes through the rivers and lakes."
+  cultivation_lifestyle_highlight_desc:0 "Open a path fit for immortals, wandering heroes, and sect patriarchs alike."
+  cultivation_path_name:0 "Dao Path"
+
+  cultivation_orthodox_focus:0 "Orthodox Dao"
+  cultivation_orthodox_focus_name:0 "Orthodox Dao"
+  cultivation_orthodox_focus_desc:0 "Meditate beneath ancestral tablets, refine your qi in proper cycles, and seek an unshaken heart-dao."
+  cultivation_orthodox_focus_effect_desc:0 ""
+
+  cultivation_unorthodox_focus:0 "Unorthodox Dao"
+  cultivation_unorthodox_focus_name:0 "Unorthodox Dao"
+  cultivation_unorthodox_focus_desc:0 "Walk the hidden paths between honor and infamy, stealing insights from every forbidden manual you can seize."
+  cultivation_unorthodox_focus_effect_desc:0 ""
+
+  cultivation_demonic_focus:0 "Demonic Dao"
+  cultivation_demonic_focus_name:0 "Demonic Dao"
+  cultivation_demonic_focus_desc:0 "Devour danger, kindle baleful qi, and carve your legend through blood, tribulation, and terror."
+  cultivation_demonic_focus_effect_desc:0 ""
+
+  cultivation_vagrant_focus:0 "Rogue Dao"
+  cultivation_vagrant_focus_name:0 "Rogue Dao"
+  cultivation_vagrant_focus_desc:0 "Roam as a lone cultivator, gleaning secret arts from ruined caves, old masters, and chance encounters under heaven."
+  cultivation_vagrant_focus_effect_desc:0 ""

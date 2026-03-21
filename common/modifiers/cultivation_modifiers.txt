@@ -1,4 +1,4 @@
-﻿unlocking_cultivation_modifier = {
+unlocking_cultivation_modifier = {
 	icon = yin_yang_modifier
 	diplomacy = -3
 	martial = -3
@@ -10,10 +10,149 @@
 focusing_cultivation_modifier = {
 	icon = yin_yang_modifier
 	diplomacy = -3
-
 	martial = -3
-	
 	intrigue = -3
 	stewardship = -3
 	prowess = -5
+}
+
+mount_hua_insight = {
+	monthly_lifestyle_xp_gain_mult = 0.1
+	prowess = 2
+}
+mount_hua_training = {
+	monthly_lifestyle_xp_gain_mult = 0.1
+	prowess = 2
+}
+heavenly_sword_pavilion_training = {
+	monthly_lifestyle_xp_gain_mult = 0.1
+	learning = 1
+	prowess = 1
+}
+ten_thousand_swords_valley_training = {
+	monthly_lifestyle_xp_gain_mult = 0.12
+	prowess = 2
+}
+violet_thunder_blade_sect_training = {
+	monthly_lifestyle_xp_gain_mult = 0.1
+	prowess = 2
+	advantage = 5
+}
+nine_star_formation_sect_training = {
+	learning = 2
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+mystic_seal_pavilion_training = {
+	learning = 2
+	stress_loss_mult = 0.05
+}
+wudang_clarity = {
+	learning = 2
+	stress_loss_mult = 0.1
+}
+shaolin_temple_training = {
+	prowess = 2
+	health = 0.5
+}
+eternal_harmony_pavilion_training = {
+	learning = 1
+	health = 0.5
+}
+divine_beast_mountain_training = {
+	prowess = 1
+	martial = 1
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+thousand_beast_valley_training = {
+	prowess = 2
+	dread_gain_mult = 0.1
+}
+crimson_moon_blade_hall_training = {
+	prowess = 2
+	dread_baseline_add = 5
+}
+tyrant_saber_palace_training = {
+	prowess = 3
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+demon_suppressing_blade_clan_training = {
+	prowess = 2
+	advantage = 5
+}
+medicine_king_blessing = {
+	health = 0.5
+	disease_resistance_add = 20
+}
+hundred_herbs_pavilion_training = {
+	learning = 2
+	health = 0.5
+}
+jade_chamber_sect_training = {
+	attraction_opinion = 5
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+moonless_night_pavilion_training = {
+	intrigue = 2
+	dread_baseline_add = 5
+}
+pale_bone_hall_training = {
+	prowess = 2
+	health = 0.5
+}
+eternal_rest_clan_training = {
+	stress_loss_mult = 0.1
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+corpse_valley_tempering = {
+	prowess = 3
+	dread_baseline_add = 10
+}
+venomous_serpent_valley_training = {
+	intrigue = 1
+	prowess = 2
+}
+blood_yin_cult_training = {
+	dread_baseline_add = 10
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+blood_moon_demonic_sect_training = {
+	prowess = 3
+	dread_baseline_add = 10
+}
+succubus_palace_training = {
+	intrigue = 2
+	attraction_opinion = 10
+}
+lone_wolf_wanderers_training = {
+	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.1
+}
+vagrant_blade_brotherhood_training = {
+	prowess = 2
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+thousand_treasures_pavilion_training = {
+	stewardship = 2
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+mystic_forge_hall_training = {
+	learning = 1
+	stewardship = 1
+}
+ancient_relic_sect_training = {
+	learning = 2
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+primal_beast_sect_training = {
+	prowess = 2
+	health = 0.5
+}
+primordial_chaos_hall_training = {
+	learning = 2
+	prowess = 1
+}
+feral_bond_sect_training = {
+	martial = 1
+	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.08
 }

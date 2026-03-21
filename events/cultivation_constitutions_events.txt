@@ -1,4 +1,4 @@
-﻿namespace = cultivation_constitutions_events
+namespace = cultivation_constitutions_events
 
 #Phoenix resurrection, TODO: figure out how to implement it
 cultivation_constitutions_events.001 = {

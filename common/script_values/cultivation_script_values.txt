@@ -1,4 +1,22 @@
-﻿cultivation_progress_multiplier = {
+cultivation_progress_multiplier = {
+
+	#Lifestyle focus checks
+	if = {
+		limit = { has_focus = cultivation_orthodox_focus }
+		add = 0.25
+	}
+	if = {
+		limit = { has_focus = cultivation_unorthodox_focus }
+		add = 0.35
+	}
+	if = {
+		limit = { has_focus = cultivation_demonic_focus }
+		add = 0.45
+	}
+	if = {
+		limit = { has_focus = cultivation_vagrant_focus }
+		add = 0.3
+	}
 
 	#Meridian checks
 	switch = {

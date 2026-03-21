@@ -1,0 +1,109 @@
+﻿spirit_severing_attachment_cutting_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = spirit_severing_tree
+	position = { 0 0 }
+	can_be_picked = {
+		has_trait = spirit_severing
+	}
+	icon = node_cultivation
+	character_modifier = {
+		prowess = 5
+		learning = 4
+		health = 2.0
+	}
+}
+
+spirit_severing_internal_void_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = spirit_severing_tree
+	position = { 2 1 }
+	can_be_picked = {
+		has_trait = spirit_severing
+	}
+	icon = node_cultivation
+	parent = spirit_severing_attachment_cutting_perk
+	character_modifier = {
+		learning = 2
+		stress_loss_mult = 0.1
+	}
+}
+
+spirit_severing_external_void_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = spirit_severing_tree
+	position = { 0 2 }
+	can_be_picked = {
+		has_trait = spirit_severing
+	}
+	icon = node_cultivation
+	parent = spirit_severing_attachment_cutting_perk
+	character_modifier = {
+		prowess = 2
+		dread_gain_mult = 0.1
+	}
+}
+
+spirit_severing_karmic_blade_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = spirit_severing_tree
+	position = { 2 3 }
+	can_be_picked = {
+		has_trait = spirit_severing
+	}
+	icon = node_cultivation
+	parent = spirit_severing_internal_void_perk
+	character_modifier = {
+		prowess = 2
+		advantage = 10
+	}
+}
+
+spirit_severing_empty_heart_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = spirit_severing_tree
+	position = { 0 4 }
+	can_be_picked = {
+		has_trait = spirit_severing
+	}
+	icon = node_cultivation
+	parent = spirit_severing_external_void_perk
+	character_modifier = {
+		learning = 2
+		health = 0.5
+	}
+}
+
+spirit_severing_perfected_severance_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = spirit_severing_tree
+	position = { 2 4 }
+	can_be_picked = {
+		has_trait = spirit_severing
+	}
+	icon = node_cultivation
+	parent = spirit_severing_karmic_blade_perk
+	parent = spirit_severing_empty_heart_perk
+	character_modifier = {
+		prowess = 6
+		learning = 5
+		health = 2.5
+	}
+}
+
+spirit_severing_dao_breakthrough_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = spirit_severing_tree
+	position = { 0 4 }
+	can_be_picked = {
+		has_trait = spirit_severing
+	}
+	icon = dao_seeking
+	parent = spirit_severing_perfected_severance_perk
+	trait = dao_seeking
+	effect = { }
+	character_modifier = {
+		prowess = 7
+		learning = 6
+		monthly_prestige = 1.5
+	}
+}

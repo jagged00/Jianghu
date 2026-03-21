@@ -1,0 +1,106 @@
+﻿foundation_establishment_body_forging_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = foundation_establishment_tree
+	position = { 0 0 }
+	can_be_picked = {
+		has_trait = foundation_establishment
+	}
+	icon = node_cultivation
+	character_modifier = {
+		prowess = 1
+		learning = 1
+	}
+}
+
+foundation_establishment_marrow_washing_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = foundation_establishment_tree
+	position = { 2 1 }
+	can_be_picked = {
+		has_trait = foundation_establishment
+	}
+	icon = node_cultivation
+	parent = foundation_establishment_body_forging_perk
+	character_modifier = {
+		health = 0.5
+		prowess = 1
+	}
+}
+
+foundation_establishment_internal_furnace_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = foundation_establishment_tree
+	position = { 0 2 }
+	can_be_picked = {
+		has_trait = foundation_establishment
+	}
+	icon = node_cultivation
+	parent = foundation_establishment_body_forging_perk
+	character_modifier = {
+		learning = 1
+		martial = 1
+	}
+}
+
+foundation_establishment_external_strengthening_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = foundation_establishment_tree
+	position = { 2 3 }
+	can_be_picked = {
+		has_trait = foundation_establishment
+	}
+	icon = node_cultivation
+	parent = foundation_establishment_marrow_washing_perk
+	character_modifier = {
+		prowess = 2
+	}
+}
+
+foundation_establishment_internal_strengthening_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = foundation_establishment_tree
+	position = { 0 4 }
+	can_be_picked = {
+		has_trait = foundation_establishment
+	}
+	icon = node_cultivation
+	parent = foundation_establishment_internal_furnace_perk
+	character_modifier = {
+		learning = 2
+	}
+}
+
+foundation_establishment_perfect_platform_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = foundation_establishment_tree
+	position = { 2 4 }
+	can_be_picked = {
+		has_trait = foundation_establishment
+	}
+	icon = node_cultivation
+	parent = foundation_establishment_external_strengthening_perk
+	parent = foundation_establishment_internal_strengthening_perk
+	character_modifier = {
+		prowess = 2
+		learning = 2
+		health = 1.0
+	}
+}
+
+foundation_establishment_core_breakthrough_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = foundation_establishment_tree
+	position = { 0 4 }
+	can_be_picked = {
+		has_trait = foundation_establishment
+	}
+	icon = core_formation
+	parent = foundation_establishment_perfect_platform_perk
+	trait = core_formation
+	effect = { }
+	character_modifier = {
+		prowess = 3
+		learning = 2
+		health = 1.0
+	}
+}

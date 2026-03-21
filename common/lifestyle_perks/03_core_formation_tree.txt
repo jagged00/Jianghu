@@ -1,0 +1,110 @@
+﻿core_formation_core_refinement_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = core_formation_tree
+	position = { 0 0 }
+	can_be_picked = {
+		has_trait = core_formation
+	}
+	icon = node_cultivation
+	character_modifier = {
+		prowess = 3
+		learning = 2
+		health = 1.0
+	}
+}
+
+core_formation_true_fire_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = core_formation_tree
+	position = { 2 1 }
+	can_be_picked = {
+		has_trait = core_formation
+	}
+	icon = node_cultivation
+	parent = core_formation_core_refinement_perk
+	character_modifier = {
+		prowess = 2
+		advantage = 5
+	}
+}
+
+core_formation_internal_nourishment_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = core_formation_tree
+	position = { 0 2 }
+	can_be_picked = {
+		has_trait = core_formation
+	}
+	icon = node_cultivation
+	parent = core_formation_core_refinement_perk
+	character_modifier = {
+		learning = 2
+		health = 0.5
+	}
+}
+
+core_formation_external_manifestation_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = core_formation_tree
+	position = { 2 3 }
+	can_be_picked = {
+		has_trait = core_formation
+	}
+	icon = node_cultivation
+	parent = core_formation_true_fire_perk
+	character_modifier = {
+		prowess = 2
+		martial = 1
+	}
+}
+
+core_formation_spiritual_echo_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = core_formation_tree
+	position = { 0 4 }
+	can_be_picked = {
+		has_trait = core_formation
+	}
+	icon = node_cultivation
+	parent = core_formation_internal_nourishment_perk
+	character_modifier = {
+		learning = 2
+		advantage = 5
+	}
+}
+
+core_formation_perfected_core_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = core_formation_tree
+	position = { 2 4 }
+	can_be_picked = {
+		has_trait = core_formation
+	}
+	icon = node_cultivation
+	parent = core_formation_external_manifestation_perk
+	parent = core_formation_spiritual_echo_perk
+	character_modifier = {
+		prowess = 4
+		learning = 3
+		health = 1.5
+	}
+}
+
+core_formation_nascent_soul_breakthrough_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = core_formation_tree
+	position = { 0 4 }
+	can_be_picked = {
+		has_trait = core_formation
+	}
+	icon = nascent_soul
+	parent = core_formation_perfected_core_perk
+	trait = nascent_soul
+	effect = { }
+	character_modifier = {
+		prowess = 5
+		learning = 4
+		health = 2.0
+		monthly_prestige = 0.5
+	}
+}

@@ -1,0 +1,91 @@
+﻿mortal_external_strengthening_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = mortal_realm_tree
+	position = { 0 0 }
+	can_be_picked = {
+		AND = { has_character_flag = joined_any_cultivation_sect has_character_flag = cultivation_initiated NOT = { has_trait = cultivation_realm } }
+	}
+	icon = node_cultivation
+	character_modifier = {
+		prowess = 1
+		health = 0.25
+	}
+}
+
+mortal_internal_strengthening_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = mortal_realm_tree
+	position = { 2 1 }
+	can_be_picked = {
+		AND = { has_character_flag = joined_any_cultivation_sect has_character_flag = cultivation_initiated NOT = { has_trait = cultivation_realm } }
+	}
+	icon = node_cultivation
+	character_modifier = {
+		learning = 1
+		health = 0.25
+	}
+}
+
+mortal_bone_tempering_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = mortal_realm_tree
+	position = { 0 2 }
+	can_be_picked = {
+		AND = { has_character_flag = joined_any_cultivation_sect has_character_flag = cultivation_initiated NOT = { has_trait = cultivation_realm } }
+	}
+	icon = node_cultivation
+	parent = mortal_external_strengthening_perk
+	character_modifier = {
+		prowess = 1
+		health = 0.25
+	}
+}
+
+mortal_viscera_tempering_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = mortal_realm_tree
+	position = { 2 3 }
+	can_be_picked = {
+		AND = { has_character_flag = joined_any_cultivation_sect has_character_flag = cultivation_initiated NOT = { has_trait = cultivation_realm } }
+	}
+	icon = node_cultivation
+	parent = mortal_internal_strengthening_perk
+	character_modifier = {
+		learning = 1
+		health = 0.25
+	}
+}
+
+mortal_meridian_cleansing_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = mortal_realm_tree
+	position = { 0 4 }
+	can_be_picked = {
+		AND = { has_character_flag = joined_any_cultivation_sect has_character_flag = cultivation_initiated NOT = { has_trait = cultivation_realm } }
+	}
+	icon = node_cultivation
+	parent = mortal_bone_tempering_perk
+	parent = mortal_viscera_tempering_perk
+	character_modifier = {
+		prowess = 2
+		learning = 1
+		health = 0.5
+	}
+}
+
+mortal_qi_gathering_breakthrough_perk = {
+	lifestyle = cultivation_lifestyle
+	tree = mortal_realm_tree
+	position = { 2 4 }
+	can_be_picked = {
+		AND = { has_character_flag = joined_any_cultivation_sect has_character_flag = cultivation_initiated NOT = { has_trait = cultivation_realm } }
+	}
+	icon = core_formation
+	parent = mortal_meridian_cleansing_perk
+	trait = qi_gathering
+	effect = { }
+	character_modifier = {
+		prowess = 2
+		learning = 1
+	}
+}

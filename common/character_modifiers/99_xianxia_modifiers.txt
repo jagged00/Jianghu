@@ -1,6 +1,6 @@
-samsara_memories = {
+﻿samsara_memories = {
 	icon = reincarnation
-	monthly_lifestyle_experience_mult = 0.25
+	monthly_lifestyle_xp_gain_mult = 0.25
 	stress_gain_mult = -0.5
 	learning = 4
 }

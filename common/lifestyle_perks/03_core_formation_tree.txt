@@ -1,4 +1,4 @@
-core_formation_external_strengthening_perk = {
+﻿core_formation_external_strengthening_perk = {
 	lifestyle = cultivation_lifestyle
 	tree = core_formation_tree
 	position = { 0 0 }

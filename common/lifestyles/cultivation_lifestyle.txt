@@ -1,4 +1,4 @@
-cultivation_lifestyle = {
+﻿cultivation_lifestyle = {
 	is_highlighted = {
 		OR = {
 			has_trait = cultivation_realm

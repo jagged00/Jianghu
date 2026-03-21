@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
 #Mysterious herb event
   cultivation_travel_events.001.t:0 "Mysterious herb"
   cultivation_travel_events.001.desc:0 "You find a mysterious herb in the wilds, but it seems to be guarded by *insert local animal*. It seems dangerous but it might be worth it..."

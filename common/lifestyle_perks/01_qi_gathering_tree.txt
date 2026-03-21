@@ -1,4 +1,4 @@
-qi_gathering_meridian_opening_perk = {
+﻿qi_gathering_meridian_opening_perk = {
 	lifestyle = cultivation_lifestyle
 	tree = qi_gathering_tree
 	position = { 1 0 }

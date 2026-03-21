@@ -1,4 +1,4 @@
-cultivation_progress_multiplier = {
+﻿cultivation_progress_multiplier = {
 
 	#Lifestyle focus checks
 	if = {
@@ -211,7 +211,7 @@ chance_to_cultivate = {
 }
 
 cultivation_attitude = {
-	base = 0
+	value = 0
 	if = {
 
 		limit = {

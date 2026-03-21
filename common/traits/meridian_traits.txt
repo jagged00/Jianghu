@@ -1,4 +1,4 @@
-# Meridian aptitude traits
+﻿# Meridian aptitude traits
 
 poor_meridians = {
 	index = 14250

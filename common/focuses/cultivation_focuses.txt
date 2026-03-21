@@ -1,4 +1,4 @@
-cultivation_orthodox_focus = {
+﻿cultivation_orthodox_focus = {
 	lifestyle = cultivation_lifestyle
 	is_valid = { has_trait = cultivation_realm }
 	desc = {

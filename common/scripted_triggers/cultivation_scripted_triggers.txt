@@ -1,4 +1,4 @@
-is_cultivator = {
+﻿is_cultivator = {
     OR = {
         has_trait = qi_gathering
         has_trait = foundation_establishment

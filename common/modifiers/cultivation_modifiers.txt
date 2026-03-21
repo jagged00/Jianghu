@@ -1,4 +1,4 @@
-unlocking_cultivation_modifier = {
+﻿unlocking_cultivation_modifier = {
 	icon = yin_yang_modifier
 	diplomacy = -3
 	martial = -3
@@ -81,7 +81,7 @@ demon_suppressing_blade_clan_training = {
 }
 medicine_king_blessing = {
 	health = 0.5
-	disease_resistance_add = 20
+	disease_resistance = 20
 }
 hundred_herbs_pavilion_training = {
 	learning = 2

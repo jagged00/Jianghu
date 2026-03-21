@@ -1,4 +1,4 @@
-spirit_severing_external_strengthening_perk = {
+﻿spirit_severing_external_strengthening_perk = {
 	lifestyle = cultivation_lifestyle
 	tree = spirit_severing_tree
 	position = { 0 0 }

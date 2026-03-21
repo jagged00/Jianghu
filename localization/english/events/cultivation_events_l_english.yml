@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
   cultivation_important_event.001.title:0 "The Meridian Gates Tremble"
   cultivation_important_event.001.desc:0 "In the hush between breaths, you sense hidden rivers inside your body. If you force them open, fortune may grant you peerless channels—or leave you with only ordinary talent."
   cultivation_important_event.001.a:0 "Trust heaven's decree."
@@ -59,3 +59,10 @@ l_english:
   cultivation_regular_event.102.b:0 "Risk three hours beneath warped time."
   cultivation_regular_event.102.c:0 "Great opportunities demand great risks—five hours."
   cultivation_regular_event.102.d:0 "Ignore the temptation."
+
+  cultivation_important_event.002.title:0 "The Sect Accepts Your First Step"
+  cultivation_important_event.002.desc:0 "With your meridians awakened, the sect finally allows you to begin the long tempering that precedes true cultivation."
+  cultivation_regular_event.001.title:0 "Closed-Door Cultivation"
+  cultivation_regular_event.001.desc:0 "You withdraw from worldly noise, circulate qi through the cycles taught by your sect, and grind away at the next sliver of progress."
+  cultivation_important_event.999.title:0 "Immortal Vitality"
+  cultivation_important_event.999.desc:0 "The breakthrough washes away old frailty like dust before a mountain storm."

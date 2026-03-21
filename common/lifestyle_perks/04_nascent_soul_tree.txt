@@ -1,4 +1,4 @@
-nascent_soul_external_strengthening_perk = {
+﻿nascent_soul_external_strengthening_perk = {
 	lifestyle = cultivation_lifestyle
 	tree = nascent_soul_tree
 	position = { 0 0 }

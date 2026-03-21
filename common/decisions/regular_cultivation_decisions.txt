@@ -1,4 +1,4 @@
-
+﻿
 #Focus on cultivation
 
 focus_on_cultivation = {

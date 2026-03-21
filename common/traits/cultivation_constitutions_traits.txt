@@ -1,4 +1,4 @@
-yang_constitution = {
+﻿yang_constitution = {
 	index = 15250
 	ruler_designer_cost = 500						# heaven-defying body, not cheap
 	birth = 0.001									# 1 in 100,000 mortals
@@ -11,7 +11,7 @@ yang_constitution = {
 	prowess = 6
 	martial = 3
 	attraction_opinion = 20
-	prestige_gain = 0.5
+	monthly_prestige = 0.5
 	valid_sex = male
 	opposites = { yin_constitution }
 	good = yes
@@ -30,7 +30,7 @@ yin_constitution = {
 	intrigue = 6
 	learning = 4
 	attraction_opinion = 30
-	prestige_gain = 0.4
+	monthly_prestige = 0.4
 	valid_sex = female
 	opposites = { yang_constitution }
 	good = yes
@@ -47,8 +47,8 @@ poison_constitution = {
 	prowess = 4
 	intrigue = 8
 	dread_baseline_add = 30
-	dread_gain = 0.5
-	assassination_success_chance = 0.3
+	dread_gain_mult = 0.5
+	hostile_scheme_power_mult = 0.3
 	good = yes
 }
 
@@ -63,22 +63,22 @@ lightning_constitution = {
 	years_of_fertility = 15
 	prowess = 8
 	martial = 5
-	movement_speed = 0.3
+	travel_speed_mult = 0.3
 	learning = 3
 	attraction_opinion = 20
-	hostile_scheme_resistance = 0.4
+	hostile_scheme_resistance_mult = 0.4
 	good = yes
 }
 
 # Dragon Bloodline (weaker version)
 dragon_bloodline = {
-	cost = 150
+	ruler_designer_cost = 150
 	inherit_chance = 60
 	both_parent_has_trait_inherit_chance = 100
 	martial = 2
 	prowess = 3
 	health = 0.8
-	prestige_gain = 0.2
+	monthly_prestige = 0.2
 	dread_baseline_add = 10
 	life_expectancy = 30
 	good = yes
@@ -94,20 +94,20 @@ dragon_bloodline = {
 
 # True Dragon Body Constitution (full awakening)
 dragon_body_constitution = {
-	cost = 800
+	ruler_designer_cost = 800
 	shown_in_ruler_designer = no
 	inherit_chance = 20								# almost never inherited directly
 	both_parent_has_trait_inherit_chance = 70
 	martial = 8
 	prowess = 15
 	health = 4
-	prestige_gain = 1.0
+	monthly_prestige = 1.0
 	dread_baseline_add = 50
-	dread_gain = 0.8
+	dread_gain_mult = 0.8
 	fertility = 0.3
 	years_of_fertility = 60
 	life_expectancy = 200
-	hostile_scheme_resistance = 0.6
+	hostile_scheme_resistance_mult = 0.6
 	attraction_opinion = 40
 	good = yes
 	opposites = { dragon_bloodline }
@@ -115,18 +115,18 @@ dragon_body_constitution = {
 
 # Phoenix Blood Constitution — rebirth makes it broken
 phoenix_blood_constitution = {
-	cost = 900
+	ruler_designer_cost = 900
 	shown_in_ruler_designer = no
 	birth = 0.0001									# one in a million
 	random_creation = 0.0001
 	inherit_chance = 25
 	both_parent_has_trait_inherit_chance = 90
 	health = 5
-	recovery_speed = 0.8
+	monthly_health = 0.2
 	life_expectancy = 300
-	prestige_gain = 1.5
+	monthly_prestige = 1.5
 	attraction_opinion = 50
-	hostile_scheme_resistance = 0.8
+	hostile_scheme_resistance_mult = 0.8
 	# Resurrections handled by event, but the trait itself is already god-tier
 	good = yes
 }

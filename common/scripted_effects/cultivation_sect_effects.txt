@@ -1,4 +1,4 @@
-clear_cultivation_sect_membership_effect = {
+﻿clear_cultivation_sect_membership_effect = {
 	remove_character_flag = mount_hua_disciple
 	remove_character_flag = heavenly_sword_pavilion_disciple
 	remove_character_flag = ten_thousand_swords_valley_disciple

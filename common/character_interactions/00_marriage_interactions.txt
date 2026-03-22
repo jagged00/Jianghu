@@ -752,7 +752,22 @@ arrange_marriage_interaction = {
 	ai_accept = {
 		base = 0
 		
-                xianxia_marriage_preference_effect = yes
+		if = {
+			limit = { has_trait = heavenly_meridians }
+			add = 200
+		}
+		else_if = {
+			limit = { has_trait = excellent_meridians }
+			add = 150
+		}
+		else_if = {
+			limit = { has_trait = good_meridians }
+			add = 100
+		}
+		else_if = {
+			limit = { has_trait = normal_meridians }
+			add = 30
+		}
 		
 		marriage_ai_accept_modifier = yes
 	}
@@ -1593,7 +1608,22 @@ marry_off_interaction = {
 	ai_accept = {
 		base = 0 # Should be 0 for all interactions
 		
-                xianxia_marriage_preference_effect = yes
+		if = {
+			limit = { has_trait = heavenly_meridians }
+			add = 200
+		}
+		else_if = {
+			limit = { has_trait = excellent_meridians }
+			add = 150
+		}
+		else_if = {
+			limit = { has_trait = good_meridians }
+			add = 100
+		}
+		else_if = {
+			limit = { has_trait = normal_meridians }
+			add = 30
+		}
 		
 		marriage_ai_accept_modifier = yes
 
@@ -2822,9 +2852,9 @@ ai_make_concubine_interaction = {
 			}
 		}
 		
-             modifier = {
-                     add = 100
-                     scope:recipient = { xianxia_marriage_preference_effect = yes }
+		modifier = {
+			add = 100
+			scope:recipient = { OR = { has_trait = heavenly_meridians has_trait = excellent_meridians has_trait = good_meridians has_trait = normal_meridians } }
 
 		}
 		

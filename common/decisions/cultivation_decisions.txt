@@ -14,7 +14,7 @@ claim_heavenly_mandate_vassal_decision = {
     selection_tooltip = claim_heavenly_mandate_vassal_tooltip
 
     is_shown = {
-        has_trait = cultivation_realm
+        is_cultivator = yes
         OR = {
             has_trait = nascent_soul
             has_trait = dao_seeking
@@ -69,7 +69,7 @@ claim_heavenly_mandate_independent_decision = {
     selection_tooltip = claim_heavenly_mandate_independent_tooltip
 
     is_shown = {
-        has_trait = cultivation_realm
+        is_cultivator = yes
         OR = {
             has_trait = nascent_soul
             has_trait = dao_seeking
@@ -120,7 +120,7 @@ claim_superior_realm_liege_title_decision = {
     selection_tooltip = claim_superior_realm_liege_tooltip
 
     is_shown = {
-        has_trait = cultivation_realm
+        is_cultivator = yes
         exists = liege
 
         # Actor is higher realm (Nascent Soul+)
@@ -193,7 +193,7 @@ purify_mortal_shell_decision = {
     selection_tooltip = purify_mortal_shell_decision_tooltip
 
     is_shown = {
-        has_trait = cultivation_realm
+        is_cultivator = yes
         NOT = { has_character_flag = purified_mortal_shell_cooldown }
         OR = {
             has_trait = ill
@@ -244,7 +244,7 @@ purify_mortal_shell_decision = {
         }
     }
 
-    is_valid = { always = yes }
+    is_valid = { is_cultivator = yes }
 
     ai_check_interval = 60
     ai_potential = { always = yes }
@@ -306,7 +306,6 @@ purify_mortal_shell_decision = {
 		remove_trait = intellect_bad_3
 
         add_character_flag = { flag = purified_mortal_shell_cooldown days = 730 }
-        log = "[ROOT.GetName] has purified their mortal shell — all mortal flaws eradicated!"
     }
 }
 
@@ -326,19 +325,18 @@ grant_qi_gathering_to_meridian_holders_decision = {
     selection_tooltip = qi_gathering_granted_tooltip
 
     is_shown = {
+        is_cultivator = yes
         OR = {
             is_ruler = yes
-            is_court_chaplain = yes
-            is_court_physician = yes
             has_court_position = court_tutor
         }
         any_courtier = {
-            has_trait = active_meridians
+            has_awakened_meridians = yes
             NOT = { has_trait = qi_gathering }
         }
     }
 
-    is_valid = { always = yes }
+    is_valid = { is_cultivator = yes }
 
     ai_check_interval = 60
     ai_potential = { always = yes }
@@ -349,32 +347,19 @@ grant_qi_gathering_to_meridian_holders_decision = {
     effect = {
         every_courtier = {
             limit = {
-                has_trait = active_meridians
-                NOT = { has_trait = cultivation_realm }
+                has_awakened_meridians = yes
+                NOT = { is_cultivator = yes }
             }
             add_trait = qi_gathering
-            log = "[THIS.GetName] has awakened their meridians and begun gathering qi!"
         }
         every_vassal = {
             limit = {
-                has_trait = active_meridians
-                NOT = { has_trait = cultivation_realm }
+                has_awakened_meridians = yes
+                NOT = { is_cultivator = yes }
             }
             add_trait = qi_gathering
-            log = "[THIS.GetName] (vassal) has awakened their meridians and begun gathering qi!"
-        }
-        every_realm_character = {
-            limit = {
-                has_trait = active_meridians
-                NOT = { has_trait = cultivation_realm }
-                NOT = { is_courtier_of = root }
-                NOT = { is_vassal_of = root }
-            }
-            add_trait = qi_gathering
-            log = "[THIS.GetName] (realm) has awakened their meridians and begun gathering qi!"
         }
 
         add_character_flag = { flag = qi_gathering_granted_cooldown days = 100 }
-        custom_tooltip = qi_gathering_granted_tooltip
     }
 }

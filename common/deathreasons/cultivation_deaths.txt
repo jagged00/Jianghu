@@ -1,4 +1,4 @@
-﻿
+
 death_breakthrough = {
 	public_knowledge = yes
 	icon = "death_disease.dds"

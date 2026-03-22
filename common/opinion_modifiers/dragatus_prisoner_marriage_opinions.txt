@@ -1,4 +1,4 @@
-dragatus_rightful_spouse_opinion = {
+﻿dragatus_rightful_spouse_opinion = {
 	opinion = 5
 	years = 20
 	decaying = yes

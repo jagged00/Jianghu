@@ -317,10 +317,10 @@ msc_yield_chance = {
 		limit = { has_trait = wounded_1 }
 		subtract = 5
 	}
-	if = {
-		limit = { has_trait = cultivation_realm }
-		subtract = 150
-	}				
+		if = {
+			limit = { is_cultivator = yes }
+			subtract = 150
+		}
 	if = {
 		limit = { has_trait = wounded_2 }
 		subtract = 10

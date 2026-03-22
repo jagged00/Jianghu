@@ -2,17 +2,19 @@
 
 #Phoenix resurrection, TODO: figure out how to implement it
 cultivation_constitutions_events.001 = {
+    type = character_event
+    hidden = yes
+
     trigger = {
         has_trait = phoenix_blood_constitution
-		always = no
+        always = no
     }
 
-    option = {
-        name = "Resurrect from your ashes"
-        apply_effect = {
-            remove_wound = yes
-            gain_piety = 100
-        }
+    immediate = {
+        remove_trait = wounded_1
+        remove_trait = wounded_2
+        remove_trait = wounded_3
+        add_piety = 100
     }
 }
 
@@ -23,7 +25,7 @@ cultivation_constitutions_events.002 = {
 	title = cultivation_constitutions_events.002.t
 	desc = cultivation_constitutions_events.002.desc
 
-	theme = widgetless_travel_danger 
+	theme = widgetless_travel_danger
 	left_portrait = {
 		character = root
 		animation = thinking
@@ -95,7 +97,7 @@ cultivation_constitutions_events.003 = {
 	title = cultivation_constitutions_events.003.t
 	desc = cultivation_constitutions_events.003.desc
 
-	theme = learning 
+	theme = learning
 	left_portrait = {
 		character = root
 		animation = thinking

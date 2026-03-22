@@ -1,0 +1,55 @@
+﻿cultivation_orthodox_focus = {
+	lifestyle = cultivation_lifestyle
+	is_valid = { OR = { is_cultivator = yes has_character_flag = cultivation_initiated has_character_flag = joined_any_cultivation_sect } }
+	desc = {
+		desc = cultivation_orthodox_focus_desc
+		desc = line_break
+	}
+	modifier = {
+		monthly_prestige = 0.3
+		learning = 1
+		stress_loss_mult = 0.1
+	}
+}
+
+cultivation_unorthodox_focus = {
+	lifestyle = cultivation_lifestyle
+	is_valid = { OR = { is_cultivator = yes has_character_flag = cultivation_initiated has_character_flag = joined_any_cultivation_sect } }
+	desc = {
+		desc = cultivation_unorthodox_focus_desc
+		desc = line_break
+	}
+	modifier = {
+		intrigue = 1
+		prowess = 1
+		monthly_lifestyle_xp_gain_mult = 0.1
+	}
+}
+
+cultivation_demonic_focus = {
+	lifestyle = cultivation_lifestyle
+	is_valid = { OR = { is_cultivator = yes has_character_flag = cultivation_initiated has_character_flag = joined_any_cultivation_sect } }
+	desc = {
+		desc = cultivation_demonic_focus_desc
+		desc = line_break
+	}
+	modifier = {
+		prowess = 2
+		dread_baseline_add = 10
+		monthly_lifestyle_xp_gain_mult = 0.15
+	}
+}
+
+cultivation_vagrant_focus = {
+	lifestyle = cultivation_lifestyle
+	is_valid = { OR = { is_cultivator = yes has_character_flag = cultivation_initiated has_character_flag = joined_any_cultivation_sect } }
+	desc = {
+		desc = cultivation_vagrant_focus_desc
+		desc = line_break
+	}
+	modifier = {
+		learning = 1
+		monthly_lifestyle_xp_gain_mult = 0.15
+		stress_loss_mult = 0.1
+	}
+}

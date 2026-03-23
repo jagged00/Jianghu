@@ -1,4 +1,4 @@
-﻿on_game_start = {
+on_game_start = {
     effect = {
         every_living_character = {
             mymod_initialize_meridians_effect

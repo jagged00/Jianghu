@@ -8,7 +8,7 @@ cultivation_travel_events.001 = { # Found a cultivation herb
 	title = cultivation_travel_events.001.t
 	desc = cultivation_travel_events.001.desc
 
-	theme = widgetless_travel_danger 
+	theme = widgetless_travel_danger
 	left_portrait = {
 		character = root
 		animation = survey
@@ -33,7 +33,7 @@ cultivation_travel_events.001 = { # Found a cultivation herb
 				add = 10
 			}
 		}
-		
+
 		random_list = {
 			10 = {
 				#Get the herb uninjured
@@ -57,7 +57,7 @@ cultivation_travel_events.001 = { # Found a cultivation herb
 					}
 				}
 				death = {
-					death_reason = death_animal_fight 
+					death_reason = death_animal_fight
 				}
 			}
 		}
@@ -103,7 +103,7 @@ cultivation_travel_events.001 = { # Found a cultivation herb
 					}
 				}
 				death = {
-					death_reason = death_animal_fight 
+					death_reason = death_animal_fight
 				}
 			}
 		}
@@ -123,7 +123,7 @@ cultivation_travel_events.002 = { # A spirit calls you to a nearby tomb
 	title = cultivation_travel_events.002.t
 	desc = cultivation_travel_events.002.desc
 
-	theme = widgetless_travel_danger 
+	theme = widgetless_travel_danger
 	left_portrait = {
 		character = root
 		animation = survey
@@ -148,7 +148,7 @@ cultivation_travel_events.002 = { # A spirit calls you to a nearby tomb
 				has_trait = paranoid
 			}
 		}
-		
+
 		random_list = {
 			1 = {
 				#Attack it and be uninjured
@@ -165,7 +165,7 @@ cultivation_travel_events.002 = { # A spirit calls you to a nearby tomb
 
 				wound_cultivation_character = yes
 
-				
+
 			}
 			25 = {
 				#Die trying
@@ -176,7 +176,7 @@ cultivation_travel_events.002 = { # A spirit calls you to a nearby tomb
 					}
 				}
 				death = {
-					death_reason = death_cultivator_spirit 
+					death_reason = death_cultivator_spirit
 				}
 			}
 		}
@@ -195,7 +195,7 @@ cultivation_travel_events.002 = { # A spirit calls you to a nearby tomb
 				has_trait = paranoid
 			}
 		}
-		
+
 		random_list = {
 			1 = {
 				#He is a good spirit
@@ -213,12 +213,12 @@ cultivation_travel_events.002 = { # A spirit calls you to a nearby tomb
 				improve_meridians = yes
 
 				add_trait = possessed_1
-				
+
 			}
 			3 = {
 				#He just kills you
 				death = {
-					death_reason = death_cultivator_spirit 
+					death_reason = death_cultivator_spirit
 				}
 			}
 		}
@@ -247,7 +247,7 @@ cultivation_travel_events.003 = { # Found dilapidated ruins, could potentially d
 	title = cultivation_travel_events.003.t
 	desc = cultivation_travel_events.003.desc
 
-	theme = widgetless_travel_danger 
+	theme = widgetless_travel_danger
 	left_portrait = {
 		character = root
 		animation = survey
@@ -277,7 +277,7 @@ cultivation_travel_events.003 = { # Found dilapidated ruins, could potentially d
 				add = 10
 			}
 		}
-		
+
 		random_list = {
 			1 = {
 				#Get dragon bloodline opportunity
@@ -290,7 +290,7 @@ cultivation_travel_events.003 = { # Found dilapidated ruins, could potentially d
 				wound_cultivation_character = yes
 			}
 			50 = {#Nothing happens
-				
+
 			}
 		}
 	}
@@ -316,7 +316,7 @@ cultivation_travel_events.101 = { # Poisonous mist ahead
 	title = cultivation_travel_events.101.t
 	desc = cultivation_travel_events.101.desc
 
-	theme = widgetless_travel_danger 
+	theme = widgetless_travel_danger
 	left_portrait = {
 		character = root
 		animation = survey
@@ -345,7 +345,7 @@ cultivation_travel_events.101 = { # Poisonous mist ahead
 				add = 200
 			}
 		}
-		
+
 		random_list = {
 			1 = {
 				#Go through without issue and get poison constitution
@@ -398,8 +398,8 @@ cultivation_travel_events.101 = { # Poisonous mist ahead
 				add = -200
 			}
 		}
-		
-		
+
+
 		current_travel_plan = { delay_travel_plan = { days = 15 } }
 	}
 }
@@ -411,7 +411,7 @@ cultivation_travel_events.102 = { # A cultivator tries to steal u
 	title = cultivation_travel_events.102.t
 	desc = cultivation_travel_events.102.desc
 
-	theme = widgetless_travel_danger 
+	theme = widgetless_travel_danger
 	left_portrait = {
 		character = root
 		animation = worry
@@ -448,7 +448,7 @@ cultivation_travel_events.102 = { # A cultivator tries to steal u
 				add = 10
 			}
 		}
-		
+
 		duel = {
 			skill = prowess
 			target = scope:cultivator
@@ -457,18 +457,18 @@ cultivation_travel_events.102 = { # A cultivator tries to steal u
 					value = scope:duel_value
 					multiplier = 10
 					min = -19
-			   	}
+				}
 			}
 			30 = {
 				compare_modifier = {
 					value = scope:duel_value
 					min = -29
-			   	}
-				
+				}
+
 				wound_cultivation_character = yes
 			}
 			50 = {
-				
+
 				wound_cultivation_character = yes
 				remove_short_term_gold = 150
 			}
@@ -486,13 +486,13 @@ cultivation_travel_events.102 = { # A cultivator tries to steal u
 				has_trait = craven
 				add = 10
 			}
-			
+
 			modifier = {
 				has_trait = greedy
 				add = -10
 			}
 		}
-		
+
 		remove_short_term_gold = 150
 	}
 
@@ -508,7 +508,7 @@ cultivation_travel_events.102 = { # A cultivator tries to steal u
 				has_trait = craven
 				add = 10
 			}
-			
+
 			modifier = {
 				has_trait = greedy
 				add = 10
@@ -523,24 +523,24 @@ cultivation_travel_events.102 = { # A cultivator tries to steal u
 					value = scope:duel_value
 					multiplier = 5
 					min = -39
-			   	}
+				}
 			}
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = 2
 					min = -49
-			   	}
-				
+				}
+
 				wound_cultivation_character = yes
 			}
 			10 = {
-				
+
 				wound_cultivation_character = yes
 				remove_short_term_gold = 150
 			}
 		}
-		
+
 		current_travel_plan = { delay_travel_plan = { days = 15 } }
 	}
 }

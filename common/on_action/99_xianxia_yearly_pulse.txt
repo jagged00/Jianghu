@@ -1,0 +1,19 @@
+﻿on_yearly_character_pulse = {
+    events = {
+        xianxia_qi.0001        # your hidden Qi grant (use whichever ID you prefer)
+    }
+
+    effect = {
+        every_living_character = {
+            # ————————————————
+            # 1. Realm Cultivators – XP + Breakthrough + Disease Cleanse
+            # ————————————————
+            if = {
+                limit = { is_cultivator = yes }
+                mymod_cultivation_gain_xp_effect
+                mymod_remove_all_diseases_effect
+            }
+
+        }
+    }
+}

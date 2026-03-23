@@ -1,4 +1,4 @@
-### Forced-Copulation ###
+﻿### Forced-Copulation ###
 forced_copulate_opinion = {
 	opinion = -40
 	years = 10
